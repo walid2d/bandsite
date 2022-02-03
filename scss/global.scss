@@ -17,6 +17,10 @@ html {
   gap: 2rem;
   padding: 0 8rem;
   height: 8rem;
+  @include fix(tablet) {
+    padding: 0 3.6rem;
+    height: 10rem;
+  }
   &__item {
     max-width: 12rem;
     max-height: 2rem;
@@ -61,8 +65,10 @@ html {
   &__text {
     @include text-style(700, white);
     @include text-size(6.8rem, 6rem);
-
     margin: 0rem 7rem;
+    @include fix(tablet) {
+      margin: 0 3.6rem;
+    }
   }
 }
 .article {
@@ -75,6 +81,9 @@ html {
     @include text-style(700);
     @include text-size(4.4rem, 3.6rem);
     margin-left: 4rem;
+    @include fix(tablet) {
+      margin-left: 0rem;
+    }
   }
   &__image {
     height: 46rem;
@@ -152,17 +161,17 @@ html {
   flex-direction: column;
   gap: 3.6rem;
   &__logobox {
-    width: 100%;
     display: flex;
-    justify-content: flex-start;
-    gap: 3.6rem;
-    position: relative;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
   }
   &__logo-wrapper {
     display: flex;
-    justify-content: space-evenly;
     align-items: center;
-    flex: 0 0 12%;
+    justify-content: flex-start;
+    flex: 1;
   }
   &__heading {
     @extend .gallery__heading;
@@ -171,14 +180,11 @@ html {
   }
   &__logo {
     @extend .nav__item;
-    width: 100%;
+    margin-left: 2.5rem;
   }
   &__logo-top {
-    position: absolute;
     max-width: 12rem;
     max-height: 2rem;
-    top: 1rem;
-    left: 101.5rem;
   }
   &__wrapper {
     display: flex;

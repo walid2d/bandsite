@@ -17,6 +17,12 @@ html {
   padding: 0 8rem;
   height: 8rem;
 }
+@media screen and (max-width: 1279px) {
+  .nav {
+    padding: 0 3.6rem;
+    height: 10rem;
+  }
+}
 .nav__item, .footer__logo {
   max-width: 12rem;
   max-height: 2rem;
@@ -64,6 +70,11 @@ html {
   line-height: 6.8rem;
   margin: 0rem 7rem;
 }
+@media screen and (max-width: 1279px) {
+  .herobox__text {
+    margin: 0 3.6rem;
+  }
+}
 
 .article {
   display: flex;
@@ -78,6 +89,11 @@ html {
   font-size: 3.6rem;
   line-height: 4.4rem;
   margin-left: 4rem;
+}
+@media screen and (max-width: 1279px) {
+  .article__heading, .gallery__heading, .footer__heading {
+    margin-left: 0rem;
+  }
 }
 .article__image {
   height: 46rem;
@@ -155,31 +171,28 @@ html {
   gap: 3.6rem;
 }
 .footer__logobox {
-  width: 100%;
   display: flex;
-  justify-content: flex-start;
-  gap: 3.6rem;
-  position: relative;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 .footer__logo-wrapper {
   display: flex;
-  justify-content: space-evenly;
   align-items: center;
-  flex: 0 0 12%;
+  justify-content: flex-start;
+  flex: 1;
 }
 .footer__heading {
   color: white;
   margin: 0;
 }
 .footer__logo {
-  width: 100%;
+  margin-left: 2.5rem;
 }
 .footer__logo-top {
-  position: absolute;
   max-width: 12rem;
   max-height: 2rem;
-  top: 1rem;
-  left: 101.5rem;
 }
 .footer__wrapper {
   display: flex;
