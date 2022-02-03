@@ -21,7 +21,7 @@ html {
     padding: 0 3.6rem;
     height: 10rem;
   }
-  &__item {
+  &__logo {
     max-width: 12rem;
     max-height: 2rem;
   }
@@ -40,7 +40,7 @@ html {
     height: 100%;
     text-decoration: none;
     @include text-style(600, white);
-    @include text-size(2rem, 1.2rem);
+    @include text-size(2.2rem, 1.4rem);
     &:hover {
       opacity: 100%;
       border-bottom: 5px solid white;
@@ -65,10 +65,7 @@ html {
   &__text {
     @include text-style(700, white);
     @include text-size(6.8rem, 6rem);
-    margin: 0rem 7rem;
-    @include fix(tablet) {
-      margin: 0 3.6rem;
-    }
+    padding: 0rem 3.6rem;
   }
 }
 .article {
@@ -86,15 +83,20 @@ html {
     }
   }
   &__image {
-    height: 46rem;
     width: 100%;
-    margin-bottom: 3.6rem;
+    padding-bottom: 3.6rem;
+    @include fix(tablet) {
+      height: 34rem;
+    }
   }
   &__caption {
     @include text-style(600);
     @include text-size(3.2rem, 2.4rem);
-    margin-bottom: 3.6rem;
+    padding-bottom: 3.6rem;
     width: 81%;
+    @include fix(tablet) {
+      width: 100%;
+    }
     &--mod {
       @include text-style(400);
       @include text-size(2.2rem, 1.4rem);
@@ -103,6 +105,9 @@ html {
   &__box {
     align-self: center;
     width: 75%;
+    @include fix(tablet) {
+      width: 85%;
+    }
   }
   &__text-box {
     align-self: center;
@@ -110,6 +115,9 @@ html {
     flex-direction: column;
     gap: 1rem;
     width: 75%;
+    @include fix(tablet) {
+      width: 85%;
+    }
   }
   &__wrapper {
     display: flex;
@@ -134,6 +142,9 @@ html {
   &__heading {
     @extend .article__heading;
     margin-left: 4rem;
+    @include fix(tablet) {
+      margin: 0;
+    }
   }
   &__box {
     align-self: flex-start;
@@ -151,27 +162,35 @@ html {
     &:hover {
       filter: grayscale(0);
     }
+    @include fix(tablet) {
+      flex: 1;
+    }
   }
 }
 
 .footer {
-  padding: 4.8rem 8rem 3.6rem 8rem;
+  padding: 4.8rem 3.6rem 3.6rem 3.6rem;
   background-color: $black;
   display: flex;
   flex-direction: column;
   gap: 3.6rem;
+
   &__logobox {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    @include fix(tablet) {
+      gap: 3rem;
+    }
   }
   &__logo-wrapper {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     flex: 1;
+    height: 100%;
   }
   &__heading {
     @extend .gallery__heading;
@@ -179,12 +198,11 @@ html {
     margin: 0;
   }
   &__logo {
-    @extend .nav__item;
+    @extend .nav__logo;
     margin-left: 2.5rem;
   }
   &__logo-top {
-    max-width: 12rem;
-    max-height: 2rem;
+    @extend .nav__logo;
   }
   &__wrapper {
     display: flex;
@@ -200,15 +218,15 @@ html {
     @include text-size(2rem, 1.4rem);
   }
   &__text-light {
-    @extend .footer__text-reg;
+    @include text-style(400, white);
+    @include text-size(2rem, 1.4rem);
   }
   &__text-bold {
-    @extend .footer__text-reg;
+    @extend .footer__text-light;
     font-weight: 600;
   }
   &__logo-bottom {
-    max-width: 12rem;
-    max-height: 2rem;
+    @extend .nav__logo;
     display: none;
   }
 }
