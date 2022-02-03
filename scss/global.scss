@@ -1,0 +1,203 @@
+gi@use "./partials/variables" as *;
+@use "./partials/mixins" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+// for desktop>>
+.nav {
+  background-color: $black;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 0 8rem;
+  height: 8rem;
+  &__item {
+    max-width: 12rem;
+    max-height: 2rem;
+  }
+
+  &__bar {
+    align-self: stretch;
+    flex: 0 0 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    text-decoration: none;
+    @include text-style(600, white);
+    @include text-size(2rem, 1.2rem);
+    &:hover {
+      opacity: 100%;
+      border-bottom: 5px solid white;
+    }
+  }
+}
+.herobox {
+  background-image: url("../ assets/Images/hero-bio.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 70rem;
+  max-width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  &__text {
+    @include text-style(700, white);
+    @include text-size(6.8rem, 6rem);
+
+    margin: 0rem 7rem;
+  }
+}
+.article {
+  display: flex;
+  gap: 3.6rem;
+  flex-direction: column;
+  padding: 4.8rem 3.6rem 3.6rem 3.6rem;
+
+  &__heading {
+    @include text-style(700);
+    @include text-size(4.4rem, 3.6rem);
+    margin-left: 4rem;
+  }
+  &__image {
+    height: 46rem;
+    width: 100%;
+    margin-bottom: 3.6rem;
+  }
+  &__caption {
+    @include text-style(600);
+    @include text-size(3.2rem, 2.4rem);
+    margin-bottom: 3.6rem;
+    width: 81%;
+    &--mod {
+      @include text-style(400);
+      @include text-size(2.2rem, 1.4rem);
+    }
+  }
+  &__box {
+    align-self: center;
+    width: 75%;
+  }
+  &__text-box {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 75%;
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+  &__sub-heading {
+    @extend .article__caption;
+    margin: 0;
+  }
+  &__text {
+    @extend .article__caption--mod;
+  }
+}
+.gallery {
+  background-color: $alabaster;
+  padding: 4.8rem 3.6rem 3.6rem 3.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.6rem;
+
+  &__heading {
+    @extend .article__heading;
+    margin-left: 4rem;
+  }
+  &__box {
+    align-self: flex-start;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+  &__img {
+    width: 30%;
+    filter: grayscale(100%);
+    transition: filter 0s;
+    &:hover {
+      filter: grayscale(0);
+    }
+  }
+}
+
+.footer {
+  padding: 4.8rem 8rem 3.6rem 8rem;
+  background-color: $black;
+  display: flex;
+  flex-direction: column;
+  gap: 3.6rem;
+  &__logobox {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    gap: 3.6rem;
+    position: relative;
+  }
+  &__logo-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex: 0 0 12%;
+  }
+  &__heading {
+    @extend .gallery__heading;
+    color: white;
+    margin: 0;
+  }
+  &__logo {
+    @extend .nav__item;
+    width: 100%;
+  }
+  &__logo-top {
+    position: absolute;
+    max-width: 12rem;
+    max-height: 2rem;
+    top: 1rem;
+    left: 101.5rem;
+  }
+  &__wrapper {
+    display: flex;
+    gap: 3.6rem;
+  }
+  &__box {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  &__text-reg {
+    @include text-style(400, white);
+    @include text-size(2rem, 1.4rem);
+  }
+  &__text-light {
+    @extend .footer__text-reg;
+  }
+  &__text-bold {
+    @extend .footer__text-reg;
+    font-weight: 600;
+  }
+  &__logo-bottom {
+    max-width: 12rem;
+    max-height: 2rem;
+    display: none;
+  }
+}

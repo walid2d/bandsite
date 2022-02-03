@@ -1,0 +1,23 @@
+@use "./variables" as *;
+@import url(./_fonts.scss);
+// Query Manager
+@mixin tablet {
+  @media screen and (max-width: $tablet) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media screen and (max-width: $mobile) {
+    @content;
+  }
+}
+//Fonts
+@mixin text-style($w, $c: $black) {
+  font-family: "avenir";
+  font-weight: $w;
+  color: $c;
+}
+@mixin text-size($lh, $s: 2.2rem) {
+  font-size: $s;
+  line-height: $lh;
+}

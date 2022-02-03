@@ -1,0 +1,207 @@
+@import url(./_fonts.scss);
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+.nav {
+  background-color: #323232;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 0 8rem;
+  height: 8rem;
+}
+.nav__item, .footer__logo {
+  max-width: 12rem;
+  max-height: 2rem;
+}
+.nav__bar {
+  align-self: stretch;
+  flex: 0 0 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.nav__link {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  text-decoration: none;
+  font-family: "avenir";
+  font-weight: 600;
+  color: white;
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+.nav__link:hover {
+  opacity: 100%;
+  border-bottom: 5px solid white;
+}
+
+.herobox {
+  background-image: url("../ assets/Images/hero-bio.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 70rem;
+  max-width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.herobox__text {
+  font-family: "avenir";
+  font-weight: 700;
+  color: white;
+  font-size: 6rem;
+  line-height: 6.8rem;
+  margin: 0rem 7rem;
+}
+
+.article {
+  display: flex;
+  gap: 3.6rem;
+  flex-direction: column;
+  padding: 4.8rem 3.6rem 3.6rem 3.6rem;
+}
+.article__heading, .gallery__heading, .footer__heading {
+  font-family: "avenir";
+  font-weight: 700;
+  color: #323232;
+  font-size: 3.6rem;
+  line-height: 4.4rem;
+  margin-left: 4rem;
+}
+.article__image {
+  height: 46rem;
+  width: 100%;
+  margin-bottom: 3.6rem;
+}
+.article__caption, .article__sub-heading {
+  font-family: "avenir";
+  font-weight: 600;
+  color: #323232;
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  margin-bottom: 3.6rem;
+  width: 81%;
+}
+.article__caption--mod, .article__text {
+  font-family: "avenir";
+  font-weight: 400;
+  color: #323232;
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+}
+.article__box {
+  align-self: center;
+  width: 75%;
+}
+.article__text-box {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 75%;
+}
+.article__wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.article__sub-heading {
+  margin: 0;
+}
+.gallery {
+  background-color: #fafafa;
+  padding: 4.8rem 3.6rem 3.6rem 3.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.6rem;
+}
+.gallery__heading, .footer__heading {
+  margin-left: 4rem;
+}
+.gallery__box {
+  align-self: flex-start;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.gallery__img {
+  width: 30%;
+  filter: grayscale(100%);
+  transition: filter 0s;
+}
+.gallery__img:hover {
+  filter: grayscale(0);
+}
+
+.footer {
+  padding: 4.8rem 8rem 3.6rem 8rem;
+  background-color: #323232;
+  display: flex;
+  flex-direction: column;
+  gap: 3.6rem;
+}
+.footer__logobox {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  gap: 3.6rem;
+  position: relative;
+}
+.footer__logo-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex: 0 0 12%;
+}
+.footer__heading {
+  color: white;
+  margin: 0;
+}
+.footer__logo {
+  width: 100%;
+}
+.footer__logo-top {
+  position: absolute;
+  max-width: 12rem;
+  max-height: 2rem;
+  top: 1rem;
+  left: 101.5rem;
+}
+.footer__wrapper {
+  display: flex;
+  gap: 3.6rem;
+}
+.footer__box {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.footer__text-reg, .footer__text-bold, .footer__text-light {
+  font-family: "avenir";
+  font-weight: 400;
+  color: white;
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+.footer__text-bold {
+  font-weight: 600;
+}
+.footer__logo-bottom {
+  max-width: 12rem;
+  max-height: 2rem;
+  display: none;
+}
