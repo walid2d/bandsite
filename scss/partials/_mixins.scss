@@ -1,16 +1,19 @@
 @use "./variables" as *;
 @import url(./_fonts.scss);
 // Query Manager
-@mixin tablet {
-  @media screen and (max-width: $tablet) {
-    @content;
+@mixin fix($breakpoint) {
+  @if $breakpoint == tablet {
+    @media screen and (max-width: $tablet) {
+      @content;
+    }
+  }
+  @if $breakpoint == phone {
+    @media screen and (max-width: $mobile) {
+      @content;
+    }
   }
 }
-@mixin mobile {
-  @media screen and (max-width: $mobile) {
-    @content;
-  }
-}
+
 //Fonts
 @mixin text-style($w, $c: $black) {
   font-family: "avenir";
