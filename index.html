@@ -11,17 +11,19 @@
   <body>
     <!-- navigation -->
     <header class="nav">
-      <a href="./index.html" class="nav__item">
-        <img
-          class="nav__logo"
-          src="./ Assets/Logo/Logo-bandsite.svg"
-          alt="Bandsite Logo"
-        />
-      </a>
-      <nav class="nav__bar">
-        <a href="./index.html" class="nav__link">Biography</a>
-        <a href="./index.html" class="nav__link">Shows</a>
-      </nav>
+      <div class="nav__wrapper">
+        <a href="./index.html" class="nav__item">
+          <img
+            class="nav__logo"
+            src="./ Assets/Logo/Logo-bandsite.svg"
+            alt="Bandsite Logo"
+          />
+        </a>
+        <nav class="nav__bar">
+          <a href="./index.html" class="nav__link">Biography</a>
+          <a href="./index.html" class="nav__link">Shows</a>
+        </nav>
+      </div>
     </header>
     <!-- navigation-end -->
     <!-- hero image -->
@@ -129,23 +131,25 @@
     <!-- footer start -->
     <footer class="footer">
       <section class="footer__logo-box">
-        <div class="footer__logo-wrapper">
+        <div class="footer__wrapper">
           <h2 class="footer__heading">Get in Touch</h2>
-          <img
-            class="footer__logo footer__logo-ig"
-            src="./ assets/Icons/SVG/Icon-instagram.svg"
-            alt="instagram logo"
-          />
-          <img
-            class="footer__logo footer__logo-fb"
-            src="./ assets/Icons/SVG/Icon-facebook.svg"
-            alt="facebook logo"
-          />
-          <img
-            class="footer__logo footer__logo-tw"
-            src="./ assets/Icons/SVG/Icon-twitter.svg"
-            alt="twitter logo"
-          />
+          <div class="footer__logo-wrapper">
+            <img
+              class="footer__logo footer__logo-ig"
+              src="./ assets/Icons/SVG/Icon-instagram.svg"
+              alt="instagram logo"
+            />
+            <img
+              class="footer__logo footer__logo-fb"
+              src="./ assets/Icons/SVG/Icon-facebook.svg"
+              alt="facebook logo"
+            />
+            <img
+              class="footer__logo footer__logo-tw"
+              src="./ assets/Icons/SVG/Icon-twitter.svg"
+              alt="twitter logo"
+            />
+          </div>
         </div>
         <img
           class="footer__logo-top"
