@@ -18,7 +18,7 @@ html {
   justify-content: center;
 
   @include fix(tablet) {
-    height: 10rem;
+    height: 9rem;
   }
   &__wrapper {
     width: 86%;
@@ -26,8 +26,11 @@ html {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 3.6rem;
+    gap: 6rem;
     padding: 0 3.6rem 0 3.6rem;
+    @include fix(tablet) {
+      width: 100%;
+    }
   }
   &__logo {
     max-width: 12rem;
@@ -35,12 +38,15 @@ html {
   }
 
   &__bar {
-    flex: 0 0 12%;
+    flex: 0 0 13%;
     align-self: stretch;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 2rem;
+    @include fix(tablet) {
+      gap: 2.2rem;
+    }
   }
   &__link {
     height: 100%;
@@ -74,13 +80,16 @@ html {
   &__text {
     @include text-style(700, white);
     @include text-size(6.8rem, 6rem);
-    // padding: 0rem 3.6rem;
     width: 86%;
+    @include fix(tablet) {
+      width: 100%;
+      padding: 0rem 3.6rem;
+    }
   }
 }
 .article {
   display: flex;
-  gap: 4.8rem;
+  gap: 3.6rem;
   flex-direction: column;
   align-items: center;
   padding: 4.8rem 3.6rem 3.6rem 3.6rem;
@@ -91,37 +100,38 @@ html {
     display: flex;
     width: 87%;
     @include fix(tablet) {
-      margin-left: 0rem;
+      width: 100%;
     }
   }
   &__image {
+    display: inline-flex;
     width: 100%;
-    height: 52rem;
-
+    max-height: 70rem;
     @include fix(tablet) {
-      height: 34rem;
+      max-height: 56rem;
     }
   }
   &__caption {
     @include text-style(600);
     @include text-size(3.2rem, 2.4rem);
     width: 81%;
+    padding-top: 3.6rem;
     @include fix(tablet) {
       width: 100%;
     }
     &--mod {
       @include text-style(400);
       @include text-size(2.2rem, 1.4rem);
+      padding-top: 2rem;
     }
   }
   &__box {
     align-self: center;
     display: flex;
     flex-direction: column;
-    gap: 3.6rem;
     width: 76%;
     @include fix(tablet) {
-      width: 85%;
+      width: 90%;
     }
   }
   &__text-box {
@@ -130,8 +140,9 @@ html {
     flex-direction: column;
     gap: 3.6rem;
     width: 76%;
+    margin-top: 1rem;
     @include fix(tablet) {
-      width: 85%;
+      width: 90%;
     }
   }
   &__wrapper {
@@ -142,11 +153,12 @@ html {
   }
   &__sub-heading {
     @extend .article__caption;
-    margin: 0;
+    padding-top: 0;
   }
   &__text {
     @extend .article__caption--mod;
     width: 44%;
+    padding: 0;
   }
 }
 .gallery {
@@ -162,7 +174,7 @@ html {
     width: 87%;
     display: flex;
     @include fix(tablet) {
-      margin: 0;
+      width: 100%;
     }
   }
   &__box {
@@ -172,6 +184,9 @@ html {
     align-content: center;
     gap: 2rem;
     width: 97%;
+    @include fix(tablet) {
+      width: 100%;
+    }
   }
   &__img {
     width: 29%;
@@ -188,24 +203,33 @@ html {
 }
 
 .footer {
-  padding: 4.8rem 3.6rem 3.6rem 3.6rem;
   background-color: $black;
+  padding: 4.8rem 3.6rem 3.6rem 3.6rem;
   display: flex;
-  flex-direction: column;
-  gap: 4.8rem;
+  align-items: center;
+  justify-content: center;
 
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 4.8rem;
+    width: 88%;
+    @include fix(tablet) {
+      width: 100%;
+    }
+  }
   &__text-box {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 2.4rem;
+    gap: 4rem;
   }
 
   &__company {
-    padding-bottom: 3.6rem;
+    padding-bottom: 2.6rem;
   }
   &__address {
-    padding-bottom: 3.6rem;
+    @extend .footer__company;
   }
   &__txt--light {
     @include text-style(400, white);
@@ -216,7 +240,8 @@ html {
     font-weight: 600;
   }
   &__heading {
-    @extend .gallery__heading;
+    @include text-style(700);
+    @include text-size(4.4rem, 3.6rem);
     color: white;
     margin: 0;
   }
@@ -238,7 +263,7 @@ html {
     gap: 1.5rem;
   }
   &__logo-wrapper {
-    flex: 0 0 13%;
+    flex-basis: 14rem;
     display: flex;
     justify-content: space-evenly;
     align-items: center;

@@ -1,5 +1,5 @@
 @use "./variables" as *;
-@import url(./_fonts.scss);
+@use "./fonts" as *;
 // Query Manager
 @mixin fix($breakpoint) {
   @if $breakpoint == tablet {
