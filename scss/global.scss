@@ -7,6 +7,7 @@
 }
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
   font-size: 62.5%;
 }
 // for desktop>>
@@ -20,6 +21,10 @@ html {
   @include fix(tablet) {
     height: 9rem;
   }
+  @include fix(phone) {
+    height: auto;
+  }
+
   &__wrapper {
     width: 86%;
     height: 100%;
@@ -31,10 +36,20 @@ html {
     @include fix(tablet) {
       width: 100%;
     }
+    @include fix(phone) {
+      padding: 0;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1rem;
+      align-self: stretch;
+    }
   }
   &__logo {
     max-width: 12rem;
     max-height: 2rem;
+    @include fix(phone) {
+      padding: 1.5rem 0 0 0;
+    }
   }
 
   &__bar {
@@ -47,18 +62,31 @@ html {
     @include fix(tablet) {
       gap: 2.2rem;
     }
+    @include fix(phone) {
+      gap: 0;
+    }
   }
   &__link {
-    height: 100%;
+    height: 92%;
     display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    @include text-style(600, white);
+    transition: 0s;
+    @include text-style(400, $mercury);
     @include text-size(2.2rem, 1.4rem);
     &:hover {
-      opacity: 100%;
+      color: white;
       border-bottom: 5px solid white;
+    }
+    &--active {
+      border-bottom: 5px solid white;
+      color: white;
+      font-weight: 700;
+    }
+    @include fix(phone) {
+      @include text-size(1.8rem, 1.3rem);
+      flex-basis: 50%;
     }
   }
 }
@@ -72,11 +100,18 @@ html {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 70rem;
+  height: 60vw;
   max-width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  @include fix(tablet) {
+    max-height: 60vw;
+  }
+  @include fix(phone) {
+    max-height: 60vw;
+  }
+
   &__text {
     @include text-style(700, white);
     @include text-size(6.8rem, 6rem);
@@ -84,6 +119,11 @@ html {
     @include fix(tablet) {
       width: 100%;
       padding: 0rem 3.6rem;
+    }
+    @include fix(phone) {
+      max-height: 60vw;
+      padding: 0 1.6rem 0 1.6rem;
+      @include text-size(3.2rem, 2.4rem);
     }
   }
 }
@@ -93,6 +133,10 @@ html {
   flex-direction: column;
   align-items: center;
   padding: 4.8rem 3.6rem 3.6rem 3.6rem;
+  @include fix(phone) {
+    padding: 2.4rem 1.6rem 1.6rem 1.6rem;
+    gap: 1.6rem;
+  }
 
   &__heading {
     @include text-style(700);
@@ -102,13 +146,19 @@ html {
     @include fix(tablet) {
       width: 100%;
     }
+    @include fix(phone) {
+      @include text-size(3.2rem, 2.4rem);
+    }
   }
   &__image {
     display: inline-flex;
     width: 100%;
-    max-height: 70rem;
+    max-height: 43vw;
     @include fix(tablet) {
-      max-height: 56rem;
+      max-height: 48vw;
+    }
+    @include fix(phone) {
+      max-height: 55vw;
     }
   }
   &__caption {
@@ -119,10 +169,18 @@ html {
     @include fix(tablet) {
       width: 100%;
     }
+    @include fix(phone) {
+      padding-top: 1.6rem;
+      @include text-size(2.2rem, 1.4rem);
+    }
     &--mod {
-      @include text-style(400);
+      @include text-style(600);
       @include text-size(2.2rem, 1.4rem);
       padding-top: 2rem;
+      @include fix(phone) {
+        padding-top: 1rem;
+        @include text-size(1.8rem, 1.3rem);
+      }
     }
   }
   &__box {
@@ -132,6 +190,9 @@ html {
     width: 76%;
     @include fix(tablet) {
       width: 90%;
+    }
+    @include fix(phone) {
+      width: 100%;
     }
   }
   &__text-box {
@@ -144,12 +205,23 @@ html {
     @include fix(tablet) {
       width: 90%;
     }
+    @include fix(phone) {
+      width: 100%;
+      gap: 1.6rem;
+    }
   }
   &__wrapper {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     gap: 1rem;
+    @include fix(phone) {
+      gap: 1.6rem;
+    }
+    @include fix(phone) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
   &__sub-heading {
     @extend .article__caption;
@@ -157,8 +229,12 @@ html {
   }
   &__text {
     @extend .article__caption--mod;
+    @include text-style(400);
     width: 44%;
     padding: 0;
+    @include fix(phone) {
+      width: 100%;
+    }
   }
 }
 .gallery {
@@ -168,6 +244,10 @@ html {
   flex-direction: column;
   align-items: center;
   gap: 3.6rem;
+  @include fix(phone) {
+    padding: 2.4rem 1.6rem 2.4rem 1.6rem;
+    gap: 1.6rem;
+  }
 
   &__heading {
     @extend .article__heading;
@@ -187,6 +267,10 @@ html {
     @include fix(tablet) {
       width: 100%;
     }
+    @include fix(phone) {
+      flex-flow: column wrap;
+      gap: 1.6rem;
+    }
   }
   &__img {
     width: 29%;
@@ -199,6 +283,9 @@ html {
     @include fix(tablet) {
       flex: 1;
     }
+    @include fix(phone) {
+      width: 100%;
+    }
   }
 }
 
@@ -208,6 +295,9 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
+  @include fix(phone) {
+    padding: 2.4rem 1.6rem 2.4rem 1.6rem;
+  }
 
   &__container {
     display: flex;
@@ -217,16 +307,28 @@ html {
     @include fix(tablet) {
       width: 100%;
     }
+    @include fix(phone) {
+      gap: 2.4rem;
+    }
   }
   &__text-box {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     gap: 4rem;
+    @include fix(phone) {
+      flex-direction: column;
+      align-items: flex-start;
+      align-content: center;
+      gap: 2.4rem;
+    }
   }
 
   &__company {
     padding-bottom: 2.6rem;
+    @include fix(phone) {
+      padding: 0 0 1.6rem 0;
+    }
   }
   &__address {
     @extend .footer__company;
@@ -234,6 +336,9 @@ html {
   &__txt--light {
     @include text-style(400, white);
     @include text-size(2rem, 1.4rem);
+    @include fix(phone) {
+      @include text-size(1.8rem, 1.3rem);
+    }
   }
   &__txt--bold {
     @extend .footer__txt--light;
@@ -244,6 +349,9 @@ html {
     @include text-size(4.4rem, 3.6rem);
     color: white;
     margin: 0;
+    @include fix(phone) {
+      @include text-size(3.2rem, 2.4rem);
+    }
   }
   &__logo-box {
     display: flex;
@@ -251,9 +359,18 @@ html {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    // @include fix(tablet) {
-    //   gap: 3rem;
-    // }
+    @include fix(phone) {
+      width: 50%;
+    }
+  }
+
+  &__copy-box {
+    @include fix(phone) {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.6rem;
+    }
   }
   &__wrapper {
     flex: 1;
@@ -261,23 +378,40 @@ html {
     justify-content: flex-start;
     align-items: center;
     gap: 1.5rem;
+    @include fix(phone) {
+      flex-wrap: wrap;
+      align-content: center;
+    }
   }
   &__logo-wrapper {
     flex-basis: 14rem;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    @include fix(phone) {
+      justify-content: flex-start;
+      gap: 1.5rem;
+    }
   }
   &__logo {
     @extend .nav__logo;
     flex: 0 0 25%;
-    // margin-left: 2.5rem;
+    @include fix(phone) {
+      flex: 0 0 20%;
+      padding: 0;
+    }
   }
   &__logo-top {
     @extend .nav__logo;
+    @include fix(phone) {
+      display: none;
+    }
   }
   &__logo-bottom {
     @extend .nav__logo;
     display: none;
+    @include fix(phone) {
+      display: inline-flex;
+    }
   }
 }

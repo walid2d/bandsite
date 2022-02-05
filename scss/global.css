@@ -53,6 +53,7 @@
 
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
   font-size: 62.5%;
 }
 
@@ -66,6 +67,11 @@ html {
 @media screen and (max-width: 1279px) {
   .nav {
     height: 9rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .nav {
+    height: auto;
   }
 }
 .nav__wrapper {
@@ -82,9 +88,23 @@ html {
     width: 100%;
   }
 }
+@media screen and (max-width: 767px) {
+  .nav__wrapper {
+    padding: 0;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    align-self: stretch;
+  }
+}
 .nav__logo, .footer__logo-bottom, .footer__logo-top, .footer__logo {
   max-width: 12rem;
   max-height: 2rem;
+}
+@media screen and (max-width: 767px) {
+  .nav__logo, .footer__logo-bottom, .footer__logo-top, .footer__logo {
+    padding: 1.5rem 0 0 0;
+  }
 }
 .nav__bar {
   flex: 0 0 13%;
@@ -99,21 +119,39 @@ html {
     gap: 2.2rem;
   }
 }
+@media screen and (max-width: 767px) {
+  .nav__bar {
+    gap: 0;
+  }
+}
 .nav__link {
-  height: 100%;
+  height: 92%;
   display: flex;
   justify-content: center;
   align-items: center;
   text-decoration: none;
+  transition: 0s;
   font-family: "avenir";
-  font-weight: 600;
-  color: white;
+  font-weight: 400;
+  color: #e1e1e1;
   font-size: 1.4rem;
   line-height: 2.2rem;
 }
 .nav__link:hover {
-  opacity: 100%;
+  color: white;
   border-bottom: 5px solid white;
+}
+.nav__link--active {
+  border-bottom: 5px solid white;
+  color: white;
+  font-weight: 700;
+}
+@media screen and (max-width: 767px) {
+  .nav__link {
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+    flex-basis: 50%;
+  }
 }
 
 .herobox {
@@ -121,11 +159,21 @@ html {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 70rem;
+  height: 60vw;
   max-width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media screen and (max-width: 1279px) {
+  .herobox {
+    max-height: 60vw;
+  }
+}
+@media screen and (max-width: 767px) {
+  .herobox {
+    max-height: 60vw;
+  }
 }
 .herobox__text {
   font-family: "avenir";
@@ -141,6 +189,14 @@ html {
     padding: 0rem 3.6rem;
   }
 }
+@media screen and (max-width: 767px) {
+  .herobox__text {
+    max-height: 60vw;
+    padding: 0 1.6rem 0 1.6rem;
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+  }
+}
 
 .article {
   display: flex;
@@ -148,6 +204,12 @@ html {
   flex-direction: column;
   align-items: center;
   padding: 4.8rem 3.6rem 3.6rem 3.6rem;
+}
+@media screen and (max-width: 767px) {
+  .article {
+    padding: 2.4rem 1.6rem 1.6rem 1.6rem;
+    gap: 1.6rem;
+  }
 }
 .article__heading, .gallery__heading {
   font-family: "avenir";
@@ -163,14 +225,25 @@ html {
     width: 100%;
   }
 }
+@media screen and (max-width: 767px) {
+  .article__heading, .gallery__heading {
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+  }
+}
 .article__image {
   display: inline-flex;
   width: 100%;
-  max-height: 70rem;
+  max-height: 43vw;
 }
 @media screen and (max-width: 1279px) {
   .article__image {
-    max-height: 56rem;
+    max-height: 48vw;
+  }
+}
+@media screen and (max-width: 767px) {
+  .article__image {
+    max-height: 55vw;
   }
 }
 .article__caption, .article__sub-heading {
@@ -187,13 +260,27 @@ html {
     width: 100%;
   }
 }
+@media screen and (max-width: 767px) {
+  .article__caption, .article__sub-heading {
+    padding-top: 1.6rem;
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+  }
+}
 .article__caption--mod, .article__text {
   font-family: "avenir";
-  font-weight: 400;
+  font-weight: 600;
   color: #323232;
   font-size: 1.4rem;
   line-height: 2.2rem;
   padding-top: 2rem;
+}
+@media screen and (max-width: 767px) {
+  .article__caption--mod, .article__text {
+    padding-top: 1rem;
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+  }
 }
 .article__box {
   align-self: center;
@@ -204,6 +291,11 @@ html {
 @media screen and (max-width: 1279px) {
   .article__box {
     width: 90%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .article__box {
+    width: 100%;
   }
 }
 .article__text-box {
@@ -219,18 +311,43 @@ html {
     width: 90%;
   }
 }
+@media screen and (max-width: 767px) {
+  .article__text-box {
+    width: 100%;
+    gap: 1.6rem;
+  }
+}
 .article__wrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   gap: 1rem;
 }
+@media screen and (max-width: 767px) {
+  .article__wrapper {
+    gap: 1.6rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .article__wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .article__sub-heading {
   padding-top: 0;
 }
 .article__text {
+  font-family: "avenir";
+  font-weight: 400;
+  color: #323232;
   width: 44%;
   padding: 0;
+}
+@media screen and (max-width: 767px) {
+  .article__text {
+    width: 100%;
+  }
 }
 
 .gallery {
@@ -240,6 +357,12 @@ html {
   flex-direction: column;
   align-items: center;
   gap: 3.6rem;
+}
+@media screen and (max-width: 767px) {
+  .gallery {
+    padding: 2.4rem 1.6rem 2.4rem 1.6rem;
+    gap: 1.6rem;
+  }
 }
 .gallery__heading {
   width: 87%;
@@ -263,6 +386,12 @@ html {
     width: 100%;
   }
 }
+@media screen and (max-width: 767px) {
+  .gallery__box {
+    flex-flow: column wrap;
+    gap: 1.6rem;
+  }
+}
 .gallery__img {
   width: 29%;
   height: 10%;
@@ -277,6 +406,11 @@ html {
     flex: 1;
   }
 }
+@media screen and (max-width: 767px) {
+  .gallery__img {
+    width: 100%;
+  }
+}
 
 .footer {
   background-color: #323232;
@@ -284,6 +418,11 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@media screen and (max-width: 767px) {
+  .footer {
+    padding: 2.4rem 1.6rem 2.4rem 1.6rem;
+  }
 }
 .footer__container {
   display: flex;
@@ -296,14 +435,32 @@ html {
     width: 100%;
   }
 }
+@media screen and (max-width: 767px) {
+  .footer__container {
+    gap: 2.4rem;
+  }
+}
 .footer__text-box {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 4rem;
 }
+@media screen and (max-width: 767px) {
+  .footer__text-box {
+    flex-direction: column;
+    align-items: flex-start;
+    align-content: center;
+    gap: 2.4rem;
+  }
+}
 .footer__company, .footer__address {
   padding-bottom: 2.6rem;
+}
+@media screen and (max-width: 767px) {
+  .footer__company, .footer__address {
+    padding: 0 0 1.6rem 0;
+  }
 }
 .footer__txt--light, .footer__txt--bold {
   font-family: "avenir";
@@ -311,6 +468,12 @@ html {
   color: white;
   font-size: 1.4rem;
   line-height: 2rem;
+}
+@media screen and (max-width: 767px) {
+  .footer__txt--light, .footer__txt--bold {
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+  }
 }
 .footer__txt--bold {
   font-weight: 600;
@@ -324,12 +487,31 @@ html {
   color: white;
   margin: 0;
 }
+@media screen and (max-width: 767px) {
+  .footer__heading {
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+  }
+}
 .footer__logo-box {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   width: 100%;
+}
+@media screen and (max-width: 767px) {
+  .footer__logo-box {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer__copy-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.6rem;
+  }
 }
 .footer__wrapper {
   flex: 1;
@@ -338,15 +520,43 @@ html {
   align-items: center;
   gap: 1.5rem;
 }
+@media screen and (max-width: 767px) {
+  .footer__wrapper {
+    flex-wrap: wrap;
+    align-content: center;
+  }
+}
 .footer__logo-wrapper {
   flex-basis: 14rem;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
+@media screen and (max-width: 767px) {
+  .footer__logo-wrapper {
+    justify-content: flex-start;
+    gap: 1.5rem;
+  }
+}
 .footer__logo {
   flex: 0 0 25%;
 }
+@media screen and (max-width: 767px) {
+  .footer__logo {
+    flex: 0 0 20%;
+    padding: 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer__logo-top {
+    display: none;
+  }
+}
 .footer__logo-bottom {
   display: none;
+}
+@media screen and (max-width: 767px) {
+  .footer__logo-bottom {
+    display: inline-flex;
+  }
 }
