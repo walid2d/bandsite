@@ -14,7 +14,6 @@
   height: 60vw;
   max-width: 100%;
   @include flex;
-
   @include fix(tablet) {
     max-height: 60vw;
   }
@@ -82,12 +81,12 @@
       @include text-size(2.2rem, 1.4rem);
     }
     &--mod {
-      @include text-style(600);
+      @include text-style(700);
       @include text-size(2.2rem, 1.4rem);
       padding-top: 2rem;
       @include fix(phone) {
         padding-top: 1rem;
-        @include text-size(1.8rem, 1.3rem);
+        @include text-size(2rem, 1.3rem);
       }
     }
   }
@@ -134,11 +133,13 @@
     padding-top: 0;
   }
   &__text {
-    @extend .article__caption--mod;
+    @include text-size(2.2rem, 1.4rem);
     @include text-style(400);
+    font-size: 1.4rem;
     width: 44%;
     padding: 0;
     @include fix(phone) {
+      @include text-size(1.8rem, 1.3rem);
       width: 100%;
     }
   }

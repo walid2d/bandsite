@@ -163,19 +163,19 @@
     line-height: 2.2rem;
   }
 }
-.article__caption--mod, .article__text {
+.article__caption--mod {
   font-family: "avenir";
-  font-weight: 600;
+  font-weight: 700;
   color: #323232;
   font-size: 1.4rem;
   line-height: 2.2rem;
   padding-top: 2rem;
 }
 @media screen and (max-width: 767px) {
-  .article__caption--mod, .article__text {
+  .article__caption--mod {
     padding-top: 1rem;
     font-size: 1.3rem;
-    line-height: 1.8rem;
+    line-height: 2rem;
   }
 }
 .article__box {
@@ -236,14 +236,19 @@
   padding-top: 0;
 }
 .article__text {
+  font-size: 1.4rem;
+  line-height: 2.2rem;
   font-family: "avenir";
   font-weight: 400;
   color: #323232;
+  font-size: 1.4rem;
   width: 44%;
   padding: 0;
 }
 @media screen and (max-width: 767px) {
   .article__text {
+    font-size: 1.3rem;
+    line-height: 1.8rem;
     width: 100%;
   }
 }
