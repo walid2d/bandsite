@@ -1,6 +1,6 @@
 @use "./variables" as *;
 @use "./fonts" as *;
-// Query Manager
+
 @mixin fix($breakpoint) {
   @if $breakpoint == tablet {
     @media screen and (max-width: $tablet) {
@@ -14,7 +14,6 @@
   }
 }
 
-//Fonts
 @mixin text-style($w, $c: $black) {
   font-family: "avenir";
   font-weight: $w;
@@ -23,4 +22,17 @@
 @mixin text-size($lh, $s: 2.2rem) {
   font-size: $s;
   line-height: $lh;
+}
+@mixin flex(
+  $display: flex,
+  $items: center,
+  $content: center,
+  $direction: row,
+  $alignwrap: stretch
+) {
+  display: $display;
+  align-items: $items;
+  justify-content: $content;
+  flex-direction: $direction;
+  align-content: $alignwrap;
 }

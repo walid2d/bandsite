@@ -13,9 +13,8 @@
   background-size: cover;
   height: 60vw;
   max-width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex;
+
   @include fix(tablet) {
     max-height: 60vw;
   }
@@ -39,10 +38,8 @@
   }
 }
 .article {
-  display: flex;
+  @include flex($direction: column);
   gap: 3.6rem;
-  flex-direction: column;
-  align-items: center;
   padding: 4.8rem 3.6rem 3.6rem 3.6rem;
   @include fix(phone) {
     padding: 2.4rem 1.6rem 1.6rem 1.6rem;
@@ -122,9 +119,7 @@
     }
   }
   &__wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    @include flex($content: space-between);
     gap: 1rem;
     @include fix(phone) {
       gap: 1.6rem;
@@ -151,9 +146,8 @@
 .gallery {
   background-color: $alabaster;
   padding: 4.8rem 3.6rem 3.6rem 3.6rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include flex($direction: column);
+
   gap: 3.6rem;
   @include fix(phone) {
     padding: 2.4rem 1.6rem 2.4rem 1.6rem;
@@ -169,10 +163,8 @@
     }
   }
   &__box {
-    display: flex;
+    @include flex($alignwrap: center);
     flex-flow: row wrap;
-    justify-content: center;
-    align-content: center;
     gap: 2rem;
     width: 97%;
     @include fix(tablet) {

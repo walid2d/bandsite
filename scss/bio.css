@@ -54,8 +54,10 @@
   height: 60vw;
   max-width: 100%;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  align-content: stretch;
 }
 @media screen and (max-width: 1279px) {
   .herobox {
@@ -92,9 +94,11 @@
 
 .article {
   display: flex;
-  gap: 3.6rem;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  align-content: stretch;
+  gap: 3.6rem;
   padding: 4.8rem 3.6rem 3.6rem 3.6rem;
 }
 @media screen and (max-width: 767px) {
@@ -211,8 +215,10 @@
 }
 .article__wrapper {
   display: flex;
-  flex-direction: row;
+  align-items: center;
   justify-content: space-between;
+  flex-direction: row;
+  align-content: stretch;
   gap: 1rem;
 }
 @media screen and (max-width: 767px) {
@@ -246,8 +252,10 @@
   background-color: #fafafa;
   padding: 4.8rem 3.6rem 3.6rem 3.6rem;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  align-content: stretch;
   gap: 3.6rem;
 }
 @media screen and (max-width: 767px) {
@@ -267,9 +275,11 @@
 }
 .gallery__box {
   display: flex;
-  flex-flow: row wrap;
+  align-items: center;
   justify-content: center;
+  flex-direction: row;
   align-content: center;
+  flex-flow: row wrap;
   gap: 2rem;
   width: 97%;
 }

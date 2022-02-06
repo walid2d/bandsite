@@ -1,13 +1,7 @@
 @font-face {
   font-family: "avenir";
   src: url("../../ assets/fonts/AvenirNextLTPro-Regular.eot");
-  src: url("../../ assets/fonts/AvenirNextLTPro-Regular.eot?#iefix")
-      format("embedded-opentype"),
-    url("../../ assets/fonts/AvenirNextLTPro-Regular.woff2") format("woff2"),
-    url("../../ assets/fonts/AvenirNextLTPro-Regular.woff") format("woff"),
-    url("../../ assets/fonts/AvenirNextLTPro-Regular.ttf") format("truetype"),
-    url("../../ assets/fonts/AvenirNextLTPro-Regular.svg#AvenirNextLTPro-Regular")
-      format("svg");
+  src: url("../../ assets/fonts/AvenirNextLTPro-Regular.eot?#iefix") format("embedded-opentype"), url("../../ assets/fonts/AvenirNextLTPro-Regular.woff2") format("woff2"), url("../../ assets/fonts/AvenirNextLTPro-Regular.woff") format("woff"), url("../../ assets/fonts/AvenirNextLTPro-Regular.ttf") format("truetype"), url("../../ assets/fonts/AvenirNextLTPro-Regular.svg#AvenirNextLTPro-Regular") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -15,13 +9,7 @@
 @font-face {
   font-family: "avenir";
   src: url("../../ assets/fonts/AvenirNextLTPro-Bold.eot");
-  src: url("../../ assets/fonts/AvenirNextLTPro-Bold.eot?#iefix")
-      format("embedded-opentype"),
-    url("../../ assets/fonts/AvenirNextLTPro-Bold.woff2") format("woff2"),
-    url("../../ assets/fonts/AvenirNextLTPro-Bold.woff") format("woff"),
-    url("../../ assets/fonts/AvenirNextLTPro-Bold.ttf") format("truetype"),
-    url("../../ assets/fonts/AvenirNextLTPro-Bold.svg#AvenirNextLTPro-Bold")
-      format("svg");
+  src: url("../../ assets/fonts/AvenirNextLTPro-Bold.eot?#iefix") format("embedded-opentype"), url("../../ assets/fonts/AvenirNextLTPro-Bold.woff2") format("woff2"), url("../../ assets/fonts/AvenirNextLTPro-Bold.woff") format("woff"), url("../../ assets/fonts/AvenirNextLTPro-Bold.ttf") format("truetype"), url("../../ assets/fonts/AvenirNextLTPro-Bold.svg#AvenirNextLTPro-Bold") format("svg");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -29,13 +17,7 @@
 @font-face {
   font-family: "avenir";
   src: url("../../ assets/fonts/AvenirNextLTPro-Demi.eot");
-  src: url("../../ assets/fonts/AvenirNextLTPro-Demi.eot?#iefix")
-      format("embedded-opentype"),
-    url("../../ assets/fonts/AvenirNextLTPro-Demi.woff2") format("woff2"),
-    url("../../ assets/fonts/AvenirNextLTPro-Demi.woff") format("woff"),
-    url("../../ assets/fonts/AvenirNextLTPro-Demi.ttf") format("truetype"),
-    url("../../ assets/fonts/AvenirNextLTPro-Demi.svg#AvenirNextLTPro-Demi")
-      format("svg");
+  src: url("../../ assets/fonts/AvenirNextLTPro-Demi.eot?#iefix") format("embedded-opentype"), url("../../ assets/fonts/AvenirNextLTPro-Demi.woff2") format("woff2"), url("../../ assets/fonts/AvenirNextLTPro-Demi.woff") format("woff"), url("../../ assets/fonts/AvenirNextLTPro-Demi.ttf") format("truetype"), url("../../ assets/fonts/AvenirNextLTPro-Demi.svg#AvenirNextLTPro-Demi") format("svg");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -43,13 +25,7 @@
 @font-face {
   font-family: "avenir";
   src: url("../../ assets/fonts/AvenirNextLTPro-Bold_1.eot");
-  src: url("../../ assets/fonts/AvenirNextLTPro-Bold_1.eot?#iefix")
-      format("embedded-opentype"),
-    url("../../ assets/fonts/AvenirNextLTPro-Bold_1.woff2") format("woff2"),
-    url("../../ assets/fonts/AvenirNextLTPro-Bold_1.woff") format("woff"),
-    url("../../ assets/fonts/AvenirNextLTPro-Bold_1.ttf") format("truetype"),
-    url("../../ assets/fonts/AvenirNextLTPro-Bold_1.svg#AvenirNextLTPro-Bold")
-      format("svg");
+  src: url("../../ assets/fonts/AvenirNextLTPro-Bold_1.eot?#iefix") format("embedded-opentype"), url("../../ assets/fonts/AvenirNextLTPro-Bold_1.woff2") format("woff2"), url("../../ assets/fonts/AvenirNextLTPro-Bold_1.woff") format("woff"), url("../../ assets/fonts/AvenirNextLTPro-Bold_1.ttf") format("truetype"), url("../../ assets/fonts/AvenirNextLTPro-Bold_1.svg#AvenirNextLTPro-Bold") format("svg");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -57,13 +33,7 @@
 @font-face {
   font-family: "avenir";
   src: url("../../ assets/fonts/AvenirNextLTPro-Regular_1.eot");
-  src: url("../../ assets/fonts/AvenirNextLTPro-Regular_1.eot?#iefix")
-      format("embedded-opentype"),
-    url("../../ assets/fonts/AvenirNextLTPro-Regular_1.woff2") format("woff2"),
-    url("../../ assets/fonts/AvenirNextLTPro-Regular_1.woff") format("woff"),
-    url("../../ assets/fonts/AvenirNextLTPro-Regular_1.ttf") format("truetype"),
-    url("../../ assets/fonts/AvenirNextLTPro-Regular_1.svg#AvenirNextLTPro-Regular")
-      format("svg");
+  src: url("../../ assets/fonts/AvenirNextLTPro-Regular_1.eot?#iefix") format("embedded-opentype"), url("../../ assets/fonts/AvenirNextLTPro-Regular_1.woff2") format("woff2"), url("../../ assets/fonts/AvenirNextLTPro-Regular_1.woff") format("woff"), url("../../ assets/fonts/AvenirNextLTPro-Regular_1.ttf") format("truetype"), url("../../ assets/fonts/AvenirNextLTPro-Regular_1.svg#AvenirNextLTPro-Regular") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -71,13 +41,7 @@
 @font-face {
   font-family: "avenir";
   src: url("../../ assets/fonts/AvenirNextLTPro-Demi_1.eot");
-  src: url("../../ assets/fonts/AvenirNextLTPro-Demi_1.eot?#iefix")
-      format("embedded-opentype"),
-    url("../../ assets/fonts/AvenirNextLTPro-Demi_1.woff2") format("woff2"),
-    url("../../ assets/fonts/AvenirNextLTPro-Demi_1.woff") format("woff"),
-    url("../../ assets/fonts/AvenirNextLTPro-Demi_1.ttf") format("truetype"),
-    url("../../ assets/fonts/AvenirNextLTPro-Demi_1.svg#AvenirNextLTPro-Demi")
-      format("svg");
+  src: url("../../ assets/fonts/AvenirNextLTPro-Demi_1.eot?#iefix") format("embedded-opentype"), url("../../ assets/fonts/AvenirNextLTPro-Demi_1.woff2") format("woff2"), url("../../ assets/fonts/AvenirNextLTPro-Demi_1.woff") format("woff"), url("../../ assets/fonts/AvenirNextLTPro-Demi_1.ttf") format("truetype"), url("../../ assets/fonts/AvenirNextLTPro-Demi_1.svg#AvenirNextLTPro-Demi") format("svg");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -99,6 +63,8 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: row;
+  align-content: stretch;
 }
 @media screen and (max-width: 1279px) {
   .nav {
@@ -114,8 +80,10 @@ html {
   width: 86%;
   height: 100%;
   display: flex;
-  justify-content: flex-start;
   align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-content: stretch;
   gap: 6rem;
   padding: 0 3.6rem 0 3.6rem;
 }
@@ -126,35 +94,34 @@ html {
 }
 @media screen and (max-width: 767px) {
   .nav__wrapper {
-    padding: 0;
-    flex-direction: column;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    gap: 1rem;
+    flex-direction: column;
+    align-content: stretch;
     align-self: stretch;
+    padding: 0;
+    gap: 1rem;
   }
 }
-.nav__logo,
-.footer__logo-bottom,
-.footer__logo-top,
-.footer__logo {
+.nav__logo, .footer__logo-bottom, .footer__logo-top, .footer__logo {
   max-width: 12rem;
   max-height: 2rem;
 }
 @media screen and (max-width: 767px) {
-  .nav__logo,
-  .footer__logo-bottom,
-  .footer__logo-top,
-  .footer__logo {
+  .nav__logo, .footer__logo-bottom, .footer__logo-top, .footer__logo {
     padding: 1.5rem 0 0 0;
   }
 }
 .nav__bar {
   flex: 0 0 13%;
-  align-self: stretch;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  align-content: stretch;
   gap: 2rem;
+  align-self: stretch;
 }
 @media screen and (max-width: 1279px) {
   .nav__bar {
@@ -167,17 +134,19 @@ html {
   }
 }
 .nav__link {
-  height: 92%;
   display: flex;
-  justify-content: center;
   align-items: center;
-  text-decoration: none;
-  transition: 0s;
+  justify-content: center;
+  flex-direction: row;
+  align-content: stretch;
   font-family: "avenir";
   font-weight: 400;
   color: #e1e1e1;
   font-size: 1.4rem;
   line-height: 2.2rem;
+  height: 92%;
+  text-decoration: none;
+  transition: 0s;
 }
 .nav__link:hover {
   color: white;
@@ -197,11 +166,13 @@ html {
 }
 
 .footer {
-  background-color: #323232;
-  padding: 4.8rem 3.6rem 3.6rem 3.6rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: row;
+  align-content: stretch;
+  background-color: #323232;
+  padding: 4.8rem 3.6rem 3.6rem 3.6rem;
 }
 @media screen and (max-width: 767px) {
   .footer {
@@ -226,30 +197,31 @@ html {
 }
 .footer__text-box {
   display: flex;
-  justify-content: flex-start;
   align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-content: stretch;
   gap: 4rem;
 }
 @media screen and (max-width: 767px) {
   .footer__text-box {
-    flex-direction: column;
+    display: flex;
     align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
     align-content: center;
     gap: 2.4rem;
   }
 }
-.footer__company,
-.footer__address {
+.footer__company, .footer__address {
   padding-bottom: 2.6rem;
 }
 @media screen and (max-width: 767px) {
-  .footer__company,
-  .footer__address {
+  .footer__company, .footer__address {
     padding: 0 0 1.6rem 0;
   }
 }
-.footer__txt--light,
-.footer__txt--bold {
+.footer__txt--light, .footer__txt--bold {
   font-family: "avenir";
   font-weight: 400;
   color: white;
@@ -257,8 +229,7 @@ html {
   line-height: 2rem;
 }
 @media screen and (max-width: 767px) {
-  .footer__txt--light,
-  .footer__txt--bold {
+  .footer__txt--light, .footer__txt--bold {
     font-size: 1.3rem;
     line-height: 1.8rem;
   }
@@ -279,33 +250,40 @@ html {
   .footer__heading {
     font-size: 2.4rem;
     line-height: 3.2rem;
+    width: 14rem;
+    margin-right: 2rem;
   }
 }
 .footer__logo-box {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  align-content: stretch;
   width: 100%;
 }
 @media screen and (max-width: 767px) {
   .footer__logo-box {
-    width: 50%;
+    max-width: 44vw;
   }
 }
 @media screen and (max-width: 767px) {
   .footer__copy-box {
     display: flex;
-    flex-direction: column;
     align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    align-content: stretch;
     gap: 1.6rem;
   }
 }
 .footer__wrapper {
   flex: 1;
   display: flex;
-  justify-content: flex-start;
   align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-content: stretch;
   gap: 1.5rem;
 }
 @media screen and (max-width: 767px) {
@@ -317,8 +295,10 @@ html {
 .footer__logo-wrapper {
   flex-basis: 14rem;
   display: flex;
-  justify-content: space-evenly;
   align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+  align-content: stretch;
 }
 @media screen and (max-width: 767px) {
   .footer__logo-wrapper {
