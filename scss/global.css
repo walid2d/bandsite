@@ -274,6 +274,7 @@ html {
     justify-content: center;
     flex-direction: column;
     align-content: stretch;
+    padding-top: 2.4rem;
     gap: 1.6rem;
   }
 }
@@ -315,6 +316,9 @@ html {
     padding: 0;
   }
 }
+.footer__logo-top {
+  padding: 0;
+}
 @media screen and (max-width: 767px) {
   .footer__logo-top {
     display: none;
@@ -322,6 +326,7 @@ html {
 }
 .footer__logo-bottom {
   display: none;
+  padding: 0;
 }
 @media screen and (max-width: 767px) {
   .footer__logo-bottom {

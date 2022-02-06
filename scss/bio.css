@@ -181,7 +181,10 @@
 .article__box {
   align-self: center;
   display: flex;
+  align-items: flex-start;
+  justify-content: center;
   flex-direction: column;
+  align-content: stretch;
   width: 76%;
 }
 @media screen and (max-width: 1279px) {
@@ -197,7 +200,10 @@
 .article__text-box {
   align-self: center;
   display: flex;
+  align-items: flex-start;
+  justify-content: center;
   flex-direction: column;
+  align-content: stretch;
   gap: 3.6rem;
   width: 76%;
   margin-top: 1rem;
@@ -211,6 +217,7 @@
   .article__text-box {
     width: 100%;
     gap: 1.6rem;
+    margin-top: 0.8rem;
   }
 }
 .article__wrapper {

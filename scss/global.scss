@@ -148,6 +148,7 @@ html {
   &__copy-box {
     @include fix(phone) {
       @include flex($items: flex-start, $direction: column);
+      padding-top: 2.4rem;
       gap: 1.6rem;
     }
   }
@@ -178,13 +179,16 @@ html {
   }
   &__logo-top {
     @extend .nav__logo;
+    padding: 0;
+
     @include fix(phone) {
       display: none;
     }
   }
   &__logo-bottom {
-    display: none;
     @extend .nav__logo;
+    display: none;
+    padding: 0;
     @include fix(phone) {
       display: inline-flex;
     }

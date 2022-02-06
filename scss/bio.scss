@@ -92,8 +92,7 @@
   }
   &__box {
     align-self: center;
-    display: flex;
-    flex-direction: column;
+    @include flex($direction: column, $items: flex-start);
     width: 76%;
     @include fix(tablet) {
       width: 90%;
@@ -104,8 +103,7 @@
   }
   &__text-box {
     align-self: center;
-    display: flex;
-    flex-direction: column;
+    @include flex($direction: column, $items: flex-start);
     gap: 3.6rem;
     width: 76%;
     margin-top: 1rem;
@@ -115,6 +113,7 @@
     @include fix(phone) {
       width: 100%;
       gap: 1.6rem;
+      margin-top: 0.8rem;
     }
   }
   &__wrapper {
