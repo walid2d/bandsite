@@ -1,0 +1,305 @@
+@font-face {
+  font-family: "avenir";
+  src: url("../../ assets/fonts/AvenirNextLTPro-Regular.eot");
+  src: url("../../ assets/fonts/AvenirNextLTPro-Regular.eot?#iefix") format("embedded-opentype"), url("../../ assets/fonts/AvenirNextLTPro-Regular.woff2") format("woff2"), url("../../ assets/fonts/AvenirNextLTPro-Regular.woff") format("woff"), url("../../ assets/fonts/AvenirNextLTPro-Regular.ttf") format("truetype"), url("../../ assets/fonts/AvenirNextLTPro-Regular.svg#AvenirNextLTPro-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "avenir";
+  src: url("../../ assets/fonts/AvenirNextLTPro-Bold.eot");
+  src: url("../../ assets/fonts/AvenirNextLTPro-Bold.eot?#iefix") format("embedded-opentype"), url("../../ assets/fonts/AvenirNextLTPro-Bold.woff2") format("woff2"), url("../../ assets/fonts/AvenirNextLTPro-Bold.woff") format("woff"), url("../../ assets/fonts/AvenirNextLTPro-Bold.ttf") format("truetype"), url("../../ assets/fonts/AvenirNextLTPro-Bold.svg#AvenirNextLTPro-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "avenir";
+  src: url("../../ assets/fonts/AvenirNextLTPro-Demi.eot");
+  src: url("../../ assets/fonts/AvenirNextLTPro-Demi.eot?#iefix") format("embedded-opentype"), url("../../ assets/fonts/AvenirNextLTPro-Demi.woff2") format("woff2"), url("../../ assets/fonts/AvenirNextLTPro-Demi.woff") format("woff"), url("../../ assets/fonts/AvenirNextLTPro-Demi.ttf") format("truetype"), url("../../ assets/fonts/AvenirNextLTPro-Demi.svg#AvenirNextLTPro-Demi") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "avenir";
+  src: url("../../ assets/fonts/AvenirNextLTPro-Bold_1.eot");
+  src: url("../../ assets/fonts/AvenirNextLTPro-Bold_1.eot?#iefix") format("embedded-opentype"), url("../../ assets/fonts/AvenirNextLTPro-Bold_1.woff2") format("woff2"), url("../../ assets/fonts/AvenirNextLTPro-Bold_1.woff") format("woff"), url("../../ assets/fonts/AvenirNextLTPro-Bold_1.ttf") format("truetype"), url("../../ assets/fonts/AvenirNextLTPro-Bold_1.svg#AvenirNextLTPro-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "avenir";
+  src: url("../../ assets/fonts/AvenirNextLTPro-Regular_1.eot");
+  src: url("../../ assets/fonts/AvenirNextLTPro-Regular_1.eot?#iefix") format("embedded-opentype"), url("../../ assets/fonts/AvenirNextLTPro-Regular_1.woff2") format("woff2"), url("../../ assets/fonts/AvenirNextLTPro-Regular_1.woff") format("woff"), url("../../ assets/fonts/AvenirNextLTPro-Regular_1.ttf") format("truetype"), url("../../ assets/fonts/AvenirNextLTPro-Regular_1.svg#AvenirNextLTPro-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "avenir";
+  src: url("../../ assets/fonts/AvenirNextLTPro-Demi_1.eot");
+  src: url("../../ assets/fonts/AvenirNextLTPro-Demi_1.eot?#iefix") format("embedded-opentype"), url("../../ assets/fonts/AvenirNextLTPro-Demi_1.woff2") format("woff2"), url("../../ assets/fonts/AvenirNextLTPro-Demi_1.woff") format("woff"), url("../../ assets/fonts/AvenirNextLTPro-Demi_1.ttf") format("truetype"), url("../../ assets/fonts/AvenirNextLTPro-Demi_1.svg#AvenirNextLTPro-Demi") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+.herobox {
+  background-image: linear-gradient(to top, rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url("../ assets/Images/hero-bio.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 60vw;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 1279px) {
+  .herobox {
+    max-height: 60vw;
+  }
+}
+@media screen and (max-width: 767px) {
+  .herobox {
+    max-height: 60vw;
+  }
+}
+.herobox__text {
+  font-family: "avenir";
+  font-weight: 700;
+  color: white;
+  font-size: 6rem;
+  line-height: 6.8rem;
+  width: 86%;
+}
+@media screen and (max-width: 1279px) {
+  .herobox__text {
+    width: 100%;
+    padding: 0rem 3.6rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .herobox__text {
+    max-height: 60vw;
+    padding: 0 1.6rem 0 1.6rem;
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+  }
+}
+
+.article {
+  display: flex;
+  gap: 3.6rem;
+  flex-direction: column;
+  align-items: center;
+  padding: 4.8rem 3.6rem 3.6rem 3.6rem;
+}
+@media screen and (max-width: 767px) {
+  .article {
+    padding: 2.4rem 1.6rem 1.6rem 1.6rem;
+    gap: 1.6rem;
+  }
+}
+.article__heading, .gallery__heading {
+  font-family: "avenir";
+  font-weight: 700;
+  color: #323232;
+  font-size: 3.6rem;
+  line-height: 4.4rem;
+  display: flex;
+  width: 87%;
+}
+@media screen and (max-width: 1279px) {
+  .article__heading, .gallery__heading {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .article__heading, .gallery__heading {
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+  }
+}
+.article__image {
+  display: inline-flex;
+  width: 100%;
+  max-height: 43vw;
+}
+@media screen and (max-width: 1279px) {
+  .article__image {
+    max-height: 48vw;
+  }
+}
+@media screen and (max-width: 767px) {
+  .article__image {
+    max-height: 55vw;
+  }
+}
+.article__caption, .article__sub-heading {
+  font-family: "avenir";
+  font-weight: 600;
+  color: #323232;
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  width: 81%;
+  padding-top: 3.6rem;
+}
+@media screen and (max-width: 1279px) {
+  .article__caption, .article__sub-heading {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .article__caption, .article__sub-heading {
+    padding-top: 1.6rem;
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+  }
+}
+.article__caption--mod, .article__text {
+  font-family: "avenir";
+  font-weight: 600;
+  color: #323232;
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  padding-top: 2rem;
+}
+@media screen and (max-width: 767px) {
+  .article__caption--mod, .article__text {
+    padding-top: 1rem;
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+  }
+}
+.article__box {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  width: 76%;
+}
+@media screen and (max-width: 1279px) {
+  .article__box {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .article__box {
+    width: 100%;
+  }
+}
+.article__text-box {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  gap: 3.6rem;
+  width: 76%;
+  margin-top: 1rem;
+}
+@media screen and (max-width: 1279px) {
+  .article__text-box {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .article__text-box {
+    width: 100%;
+    gap: 1.6rem;
+  }
+}
+.article__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1rem;
+}
+@media screen and (max-width: 767px) {
+  .article__wrapper {
+    gap: 1.6rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .article__wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.article__sub-heading {
+  padding-top: 0;
+}
+.article__text {
+  font-family: "avenir";
+  font-weight: 400;
+  color: #323232;
+  width: 44%;
+  padding: 0;
+}
+@media screen and (max-width: 767px) {
+  .article__text {
+    width: 100%;
+  }
+}
+
+.gallery {
+  background-color: #fafafa;
+  padding: 4.8rem 3.6rem 3.6rem 3.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.6rem;
+}
+@media screen and (max-width: 767px) {
+  .gallery {
+    padding: 2.4rem 1.6rem 2.4rem 1.6rem;
+    gap: 1.6rem;
+  }
+}
+.gallery__heading {
+  width: 87%;
+  display: flex;
+}
+@media screen and (max-width: 1279px) {
+  .gallery__heading {
+    width: 100%;
+  }
+}
+.gallery__box {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+  gap: 2rem;
+  width: 97%;
+}
+@media screen and (max-width: 1279px) {
+  .gallery__box {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .gallery__box {
+    flex-flow: column wrap;
+    gap: 1.6rem;
+  }
+}
+.gallery__img {
+  width: 29%;
+  height: 10%;
+  filter: grayscale(100%);
+  transition: filter 0s;
+}
+.gallery__img:hover {
+  filter: grayscale(0);
+}
+@media screen and (max-width: 1279px) {
+  .gallery__img {
+    flex: 1;
+  }
+}
+@media screen and (max-width: 767px) {
+  .gallery__img {
+    width: 100%;
+  }
+}
