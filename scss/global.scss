@@ -1,203 +1,196 @@
-gi@use "./partials/variables" as *;
+@use "./partials/variables" as *;
 @use "./partials/mixins" as *;
-
 * {
   margin: 0;
   padding: 0;
 }
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
   font-size: 62.5%;
 }
-// for desktop>>
 .nav {
   background-color: $black;
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  padding: 0 8rem;
   height: 8rem;
-  &__item {
+  @include flex;
+  @include fix(tablet) {
+    height: 9rem;
+  }
+  @include fix(phone) {
+    height: auto;
+  }
+  &__wrapper {
+    width: 86%;
+    height: 100%;
+    @include flex($content: flex-start);
+    gap: 6rem;
+    padding: 0 3.6rem 0 3.6rem;
+    @include fix(tablet) {
+      width: 100%;
+    }
+    @include fix(phone) {
+      @include flex($content: center, $direction: column);
+      align-self: stretch;
+      padding: 0;
+      gap: 1rem;
+    }
+  }
+  &__logo {
     max-width: 12rem;
     max-height: 2rem;
+    @include fix(phone) {
+      padding: 1.5rem 0 0 0;
+    }
   }
 
   &__bar {
-    align-self: stretch;
-    flex: 0 0 10%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    flex: 0 0 13%;
+    @include flex($content: space-between);
     gap: 2rem;
+    align-self: stretch;
+    @include fix(tablet) {
+      gap: 2.2rem;
+    }
+    @include fix(phone) {
+      gap: 0;
+    }
   }
   &__link {
-    display: flex;
-    align-items: center;
-    height: 100%;
+    @include flex;
+    @include text-style(400, $mercury);
+    @include text-size(2.2rem, 1.4rem);
+    height: 92%;
     text-decoration: none;
-    @include text-style(600, white);
-    @include text-size(2rem, 1.2rem);
+    transition: 0s;
     &:hover {
-      opacity: 100%;
+      color: white;
       border-bottom: 5px solid white;
+    }
+    &--active {
+      border-bottom: 5px solid white;
+      color: white;
+      font-weight: 700;
+    }
+    @include fix(phone) {
+      @include text-size(1.8rem, 1.3rem);
+      flex-basis: 50%;
     }
   }
 }
-.herobox {
-  background-image: url("../ assets/Images/hero-bio.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  height: 70rem;
-  max-width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  &__text {
-    @include text-style(700, white);
-    @include text-size(6.8rem, 6rem);
-
-    margin: 0rem 7rem;
-  }
-}
-.article {
-  display: flex;
-  gap: 3.6rem;
-  flex-direction: column;
+.footer {
+  @include flex;
+  background-color: $black;
   padding: 4.8rem 3.6rem 3.6rem 3.6rem;
+  @include fix(phone) {
+    padding: 2.4rem 1.6rem 2.4rem 1.6rem;
+  }
 
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 4.8rem;
+    width: 88%;
+    @include fix(tablet) {
+      width: 100%;
+    }
+    @include fix(phone) {
+      gap: 2.4rem;
+    }
+  }
+  &__text-box {
+    @include flex($content: flex-start);
+    gap: 4rem;
+    @include fix(phone) {
+      @include flex($direction: column, $items: flex-start, $alignwrap: center);
+      gap: 2.4rem;
+    }
+  }
+
+  &__company {
+    padding-bottom: 2.6rem;
+    @include fix(phone) {
+      padding: 0 0 1.6rem 0;
+    }
+  }
+  &__address {
+    @extend .footer__company;
+  }
+  &__txt--light {
+    @include text-style(400, white);
+    @include text-size(2rem, 1.4rem);
+    @include fix(phone) {
+      @include text-size(1.8rem, 1.3rem);
+    }
+  }
+  &__txt--bold {
+    @extend .footer__txt--light;
+    font-weight: 600;
+  }
   &__heading {
     @include text-style(700);
     @include text-size(4.4rem, 3.6rem);
-    margin-left: 4rem;
-  }
-  &__image {
-    height: 46rem;
-    width: 100%;
-    margin-bottom: 3.6rem;
-  }
-  &__caption {
-    @include text-style(600);
-    @include text-size(3.2rem, 2.4rem);
-    margin-bottom: 3.6rem;
-    width: 81%;
-    &--mod {
-      @include text-style(400);
-      @include text-size(2.2rem, 1.4rem);
-    }
-  }
-  &__box {
-    align-self: center;
-    width: 75%;
-  }
-  &__text-box {
-    align-self: center;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    width: 75%;
-  }
-  &__wrapper {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-  }
-  &__sub-heading {
-    @extend .article__caption;
-    margin: 0;
-  }
-  &__text {
-    @extend .article__caption--mod;
-  }
-}
-.gallery {
-  background-color: $alabaster;
-  padding: 4.8rem 3.6rem 3.6rem 3.6rem;
-  display: flex;
-  flex-direction: column;
-  gap: 3.6rem;
-
-  &__heading {
-    @extend .article__heading;
-    margin-left: 4rem;
-  }
-  &__box {
-    align-self: flex-start;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
-    gap: 2rem;
-  }
-  &__img {
-    width: 30%;
-    filter: grayscale(100%);
-    transition: filter 0s;
-    &:hover {
-      filter: grayscale(0);
-    }
-  }
-}
-
-.footer {
-  padding: 4.8rem 8rem 3.6rem 8rem;
-  background-color: $black;
-  display: flex;
-  flex-direction: column;
-  gap: 3.6rem;
-  &__logobox {
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    gap: 3.6rem;
-    position: relative;
-  }
-  &__logo-wrapper {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex: 0 0 12%;
-  }
-  &__heading {
-    @extend .gallery__heading;
     color: white;
     margin: 0;
+    @include fix(phone) {
+      @include text-size(3.2rem, 2.4rem);
+      width: 14rem;
+      margin-right: 5rem;
+    }
   }
-  &__logo {
-    @extend .nav__item;
+  &__logo-box {
+    @include flex($content: space-between);
     width: 100%;
+    @include fix(phone) {
+      max-width: 44vw;
+    }
   }
-  &__logo-top {
-    position: absolute;
-    max-width: 12rem;
-    max-height: 2rem;
-    top: 1rem;
-    left: 101.5rem;
+
+  &__copy-box {
+    @include fix(phone) {
+      @include flex($items: flex-start, $direction: column);
+      padding-top: 2.4rem;
+      gap: 1.6rem;
+    }
   }
   &__wrapper {
-    display: flex;
-    gap: 3.6rem;
+    flex: 1;
+    @include flex($content: flex-start);
+    gap: 1.5rem;
+    @include fix(phone) {
+      flex-wrap: wrap;
+      align-content: center;
+    }
   }
-  &__box {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+  &__logo-wrapper {
+    flex-basis: 14rem;
+    @include flex($content: space-evenly);
+    @include fix(phone) {
+      justify-content: flex-start;
+      gap: 1.5rem;
+    }
   }
-  &__text-reg {
-    @include text-style(400, white);
-    @include text-size(2rem, 1.4rem);
+  &__logo {
+    @extend .nav__logo;
+    flex: 0 0 25%;
+    @include fix(phone) {
+      flex: 0 0 20%;
+      padding: 0;
+    }
   }
-  &__text-light {
-    @extend .footer__text-reg;
-  }
-  &__text-bold {
-    @extend .footer__text-reg;
-    font-weight: 600;
+  &__logo-top {
+    @extend .nav__logo;
+    padding: 0;
+
+    @include fix(phone) {
+      display: none;
+    }
   }
   &__logo-bottom {
-    max-width: 12rem;
-    max-height: 2rem;
+    @extend .nav__logo;
     display: none;
+    padding: 0;
+    @include fix(phone) {
+      display: inline-flex;
+    }
   }
 }

@@ -4,38 +4,37 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./scss/global.css" />
-    <link rel="stylesheet" href="./scss/landing.css" />
+    <link rel="stylesheet" type="text/css" href="./scss/global.css" />
+    <link rel="stylesheet" type="text/css" href="./scss/bio.css" />
     <title>Bandsite</title>
   </head>
   <body>
-    <!-- navigation -->
     <header class="nav">
-      <a href="./index.html" class="nav__item">
-        <img
-          class="nav__logo"
-          src="./ Assets/Logo/Logo-bandsite.svg"
-          alt="Bandsite Logo"
-        />
-      </a>
-      <nav class="nav__bar">
-        <a href="./index.html" class="nav__link">Biography</a>
-        <a href="./index.html" class="nav__link">Shows</a>
-      </nav>
+      <div class="nav__wrapper">
+        <a href="./index.html" class="nav__item">
+          <img
+            class="nav__logo"
+            src="./assets/logo/Logo-bandsite.svg"
+            alt="Bandsite Logo"
+          />
+        </a>
+        <nav class="nav__bar">
+          <a href="./index.html" class="nav__link nav__link--active"
+            >Biography</a
+          >
+          <a href="" class="nav__link">Shows</a>
+        </nav>
+      </div>
     </header>
-    <!-- navigation-end -->
-    <!-- hero image -->
     <main class="herobox">
       <h2 class="herobox__text">The Bees Knees</h2>
     </main>
-    <!-- hero image end -->
-    <!-- band about -->
     <article class="article">
       <h2 class="article__heading">About the Musicians</h2>
       <section class="article__box">
         <img
           class="article__image"
-          src="./ assets/Images/band.jpg"
+          src="./assets/images/band.jpg"
           alt="Artist performing on stage"
         />
         <h3 class="article__caption">
@@ -43,7 +42,7 @@
           say 'this needs to be better, back to the drawing board'”
         </h3>
         <h3 class="article__caption--mod">
-          - Bryan Teddy,lead vocalist of The Bees Knees
+          - Bryan Teddy, lead vocalist of The Bees Knees
         </h3>
       </section>
       <section class="article__text-box">
@@ -74,124 +73,137 @@
         </div>
       </section>
     </article>
-    <!-- about end -->
     <article class="gallery">
       <h2 class="gallery__heading">Photo Gallery</h2>
       <section class="gallery__box">
         <img
           class="gallery__img"
-          src="./ assets/Images/Photo-gallery-1.jpg"
+          src="./assets/images/Photo-gallery-1.jpg"
           alt=""
         />
         <img
           class="gallery__img"
-          src="./ assets/Images/Photo-gallery-2.jpg"
+          src="./assets/images/Photo-gallery-2.jpg"
           alt=""
         />
         <img
           class="gallery__img"
-          src="./ assets/Images/Photo-gallery-3.jpg"
+          src="./assets/images/Photo-gallery-3.jpg"
           alt=""
         />
         <img
           class="gallery__img"
-          src="./ assets/Images/Photo-gallery-4.jpg"
+          src="./assets/images/Photo-gallery-4.jpg"
           alt=""
         />
         <img
           class="gallery__img"
-          src="./ assets/Images/Photo-gallery-5.jpg"
+          src="./assets/images/Photo-gallery-5.jpg"
           alt=""
         />
         <img
           class="gallery__img"
-          src="./ assets/Images/Photo-gallery-6.jpg"
+          src="./assets/images/Photo-gallery-6.jpg"
           alt=""
         />
         <img
           class="gallery__img"
-          src="./ assets/Images/Photo-gallery-7.jpg"
+          src="./assets/images/Photo-gallery-7.jpg"
           alt=""
         />
         <img
           class="gallery__img"
-          src="./ assets/Images/Photo-gallery-8.jpg"
+          src="./assets/images/Photo-gallery-8.jpg"
           alt=""
         />
         <img
           class="gallery__img"
-          src="./ assets/Images/Photo-gallery-9.jpg"
+          src="./assets/images/Photo-gallery-9.jpg"
           alt=""
         />
       </section>
     </article>
-
-    <!-- footer start -->
     <footer class="footer">
-      <section class="footer__logobox">
-        <h2 class="footer__heading">Get in Touch</h2>
-        <div class="footer__logo-wrapper">
+      <div class="footer__container">
+        <section class="footer__logo-box">
+          <div class="footer__wrapper">
+            <h2 class="footer__heading">Get in Touch</h2>
+            <div class="footer__logo-wrapper">
+              <img
+                class="footer__logo footer__logo-ig"
+                src="./assets/icons/SVG/Icon-instagram.svg"
+                alt="instagram logo"
+              />
+              <img
+                class="footer__logo footer__logo-fb"
+                src="./assets/icons/SVG/Icon-facebook.svg"
+                alt="facebook logo"
+              />
+              <img
+                class="footer__logo footer__logo-tw"
+                src="./assets/icons/SVG/Icon-twitter.svg"
+                alt="twitter logo"
+              />
+            </div>
+          </div>
           <img
-            class="footer__logo footer__logo-ig"
-            src="./ assets/Icons/SVG/Icon-instagram.svg"
-            alt="instagram logo"
+            class="footer__logo-top"
+            alt="Bandsite logo"
+            src="./assets/logo/Logo-bandsite.svg"
           />
-          <img
-            class="footer__logo footer__logo-fb"
-            src="./ assets/Icons/SVG/Icon-facebook.svg"
-            alt="facebook logo"
-          />
-          <img
-            class="footer__logo footer__logo-tw"
-            src="./ assets/Icons/SVG/Icon-twitter.svg"
-            alt="twitter logo"
-          />
-        </div>
-        <img
-          class="footer__logo-top"
-          alt="Bandsite logo"
-          src="./ assets/Logo/Logo-bandsite.svg"
-        />
-      </section>
-      <!--                  ***                      -->
-      <div class="footer__wrapper">
-        <section class="footer__box">
-          <h3 class="footer__text-bold">
-            Cam Adams<br />The Bees Knees Management
-          </h3>
-          <h3 class="footer__text-reg">
-            503 Broadway Penthouse,<br />New York, NY 10012, USA
-          </h3>
-          <h3 class="footer__text-light">info@thebeesknees.com</h3>
         </section>
-        <section class="footer__box">
-          <h3 class="footer__text-bold">
-            Pearl Gregg<br />Limitless Artist Group
-          </h3>
-          <h3 class="footer__text-reg">
-            Booking Agent for<br />US / South America / Japan
-          </h3>
-          <h3 class="footer__text-light">pearl.gregg@limitlessag.com</h3>
+        <section class="footer__text-box">
+          <div class="footer__box">
+            <h3 class="footer__name footer__txt--bold">Cam Adams</h3>
+            <h3 class="footer__company footer__txt--bold">
+              The Bees Knees Management
+            </h3>
+            <h3 class="footer__info footer__txt--light">
+              503 Broadway Penthouse,
+            </h3>
+            <h3 class="footer__address footer__txt--light">
+              New York, NY 10012, USA
+            </h3>
+            <h3 class="footer__email footer__txt--light">
+              info@thebeesknees.com
+            </h3>
+          </div>
+          <div class="footer__box">
+            <h3 class="footer__name footer__txt--bold">Pearl Gregg</h3>
+            <h3 class="footer__company footer__txt--bold">
+              Limitless Artist Group
+            </h3>
+            <h3 class="footer__info footer__txt--light">Booking Agent for</h3>
+            <h3 class="footer__address footer__txt--light">
+              US / South America / Japan
+            </h3>
+            <h3 class="footer__email footer__txt--light">
+              pearl.gregg@limitlessag.com
+            </h3>
+          </div>
+          <div class="footer__box">
+            <h3 class="footer__name footer__txt--bold">Carson Whyte</h3>
+            <h3 class="footer__company footer__txt--bold">
+              ARCH Entertainment
+            </h3>
+            <h3 class="footer__info footer__txt--light">Booking Agent for</h3>
+            <h3 class="footer__address footer__txt--light">UK / EU / AU</h3>
+            <h3 class="footer__email footer__txt--light">
+              cwhyte@archentertainment.com
+            </h3>
+          </div>
         </section>
-        <section class="footer__box">
-          <h3 class="footer__text-bold">
-            Carson Whyte<br />ARCH Entertainment
+        <section class="footer__copy-box">
+          <img
+            class="footer__logo-bottom"
+            alt="Bandsite logo"
+            src="./assets/logo/Logo-bandsite.svg"
+          />
+          <h3 class="footer__copy footer__txt--light">
+            Copyright The Bees Knees © 2021 All Rights Reserved
           </h3>
-          <h3 class="footer__text-reg">Booking Agent<br />for UK / EU / AU</h3>
-          <h3 class="footer__text-light">cwhyte@archentertainment.com</h3>
         </section>
       </div>
-      <section class="footer__box">
-        <img
-          class="footer__logo-bottom"
-          alt="Bandsite logo"
-          src="./ assets/Logo/Logo-bandsite.svg"
-        />
-        <h3 class="footer__text-light">
-          Copyright The Bees Knees © 2021 All Rights Reserved
-        </h3>
-      </section>
     </footer>
-    <!-- footer end -->
   </body>
 </html>
