@@ -37,6 +37,7 @@
   }
 }
 .article {
+  background-color: white;
   @include flex($direction: column);
   gap: 3.6rem;
   padding: 4.8rem 3.6rem 3.6rem 3.6rem;
