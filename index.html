@@ -22,7 +22,7 @@
           <a href="./index.html" class="nav__link nav__link--active"
             >Biography</a
           >
-          <a href="" class="nav__link">Shows</a>
+          <a href="./pages/shows.html" class="nav__link">Shows</a>
         </nav>
       </div>
     </header>
@@ -73,6 +73,7 @@
         </div>
       </section>
     </article>
+
     <article class="gallery">
       <h2 class="gallery__heading">Photo Gallery</h2>
       <section class="gallery__box">
@@ -123,6 +124,29 @@
         />
       </section>
     </article>
+    <aside class="comment">
+      <h2 class="comment__header">Join the Conversation</h2>
+      <form class="form">
+        <label for="name" class="form__label">Name</label><br />
+        <img class="form__img" src="../assets/Images/Mohan-muruge.jpg" />
+        <input
+          type="text"
+          class="form__input"
+          name="name"
+          placeholder="Enter your name"
+          autocomple="off"
+        /><br />
+        <label for="comment" class="form__label">Comment</label><br />
+        <textarea
+          type="text"
+          class="form__input-comment"
+          name="comment"
+          placeholder="Add a new comment"
+        >
+        </textarea>
+        <input type="submit" class="btn btn--bio" value="Comment" />
+      </form>
+    </aside>
     <footer class="footer">
       <div class="footer__container">
         <section class="footer__logo-box">
