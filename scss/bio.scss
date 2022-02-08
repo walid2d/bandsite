@@ -192,3 +192,70 @@
     }
   }
 }
+.comment {
+  @extend .article;
+
+  &__header {
+    @extend .gallery__heading;
+  }
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  width: 35%;
+  margin-top: 4rem;
+
+  &__label {
+    @include text-size(1.8rem, 1.3rem);
+    @include text-style(700, $silver);
+    margin: 0.4rem;
+  }
+  &__img {
+    margin: 0rem 0rem -7.3rem -6rem;
+    height: 4.8rem;
+    width: 4.8rem;
+    border-radius: 50%;
+  }
+  &__input {
+    padding: 1.5rem;
+    min-width: 4.8rem;
+    border-radius: 0.4rem;
+    border: 1px solid $mercury;
+    box-sizing: border-box;
+    background-color: $alabaster;
+    &:active {
+      border-color: $bandsite-black;
+    }
+  }
+  &__input-comment {
+    padding: 1.5rem;
+    height: 12rem;
+    min-width: 4.8rem;
+    box-sizing: border-box;
+    border-radius: 0.4rem;
+    border: 1px solid $mercury;
+    background-color: $alabaster;
+    &:active {
+      border-color: $bandsite-black;
+    }
+  }
+}
+.btn {
+  background-color: $black;
+  align-self: flex-end;
+  display: inline-flex;
+  justify-content: center;
+  border: none;
+  border-radius: 0.4rem;
+  text-transform: uppercase;
+  padding: 0 3.2rem;
+  height: 4.8rem;
+  min-width: 15rem;
+  margin-top: 2rem;
+  @include text-size(1.8rem, 1.3rem);
+  @include text-style(700, white);
+  &:hover {
+    background-color: $bandsite-black;
+  }
+}

@@ -92,7 +92,7 @@
   }
 }
 
-.article {
+.article, .comment {
   background-color: white;
   display: flex;
   align-items: center;
@@ -103,12 +103,12 @@
   padding: 4.8rem 3.6rem 3.6rem 3.6rem;
 }
 @media screen and (max-width: 767px) {
-  .article {
+  .article, .comment {
     padding: 2.4rem 1.6rem 1.6rem 1.6rem;
     gap: 1.6rem;
   }
 }
-.article__heading, .gallery__heading {
+.article__heading, .gallery__heading, .comment__header {
   font-family: "avenir";
   font-weight: 700;
   color: #323232;
@@ -118,12 +118,12 @@
   width: 87%;
 }
 @media screen and (max-width: 1279px) {
-  .article__heading, .gallery__heading {
+  .article__heading, .gallery__heading, .comment__header {
     width: 100%;
   }
 }
 @media screen and (max-width: 767px) {
-  .article__heading, .gallery__heading {
+  .article__heading, .gallery__heading, .comment__header {
     font-size: 2.4rem;
     line-height: 3.2rem;
   }
@@ -277,12 +277,12 @@
     gap: 1.6rem;
   }
 }
-.gallery__heading {
+.gallery__heading, .comment__header {
   width: 87%;
   display: flex;
 }
 @media screen and (max-width: 1279px) {
-  .gallery__heading {
+  .gallery__heading, .comment__header {
     width: 100%;
   }
 }
@@ -325,4 +325,71 @@
   .gallery__img {
     width: 100%;
   }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  width: 35%;
+  margin-top: 4rem;
+}
+.form__label {
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  font-family: "avenir";
+  font-weight: 700;
+  color: #afafaf;
+  margin: 0.4rem;
+}
+.form__img {
+  margin: 0rem 0rem -7.3rem -6rem;
+  height: 4.8rem;
+  width: 4.8rem;
+  border-radius: 50%;
+}
+.form__input {
+  padding: 1.5rem;
+  min-width: 4.8rem;
+  border-radius: 0.4rem;
+  border: 1px solid #e1e1e1;
+  box-sizing: border-box;
+  background-color: #fafafa;
+}
+.form__input:active {
+  border-color: #000000;
+}
+.form__input-comment {
+  padding: 1.5rem;
+  height: 12rem;
+  min-width: 4.8rem;
+  box-sizing: border-box;
+  border-radius: 0.4rem;
+  border: 1px solid #e1e1e1;
+  background-color: #fafafa;
+}
+.form__input-comment:active {
+  border-color: #000000;
+}
+
+.btn {
+  background-color: #323232;
+  align-self: flex-end;
+  display: inline-flex;
+  justify-content: center;
+  border: none;
+  border-radius: 0.4rem;
+  text-transform: uppercase;
+  padding: 0 3.2rem;
+  height: 4.8rem;
+  min-width: 15rem;
+  margin-top: 2rem;
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  font-family: "avenir";
+  font-weight: 700;
+  color: white;
+}
+.btn:hover {
+  background-color: #000000;
 }
