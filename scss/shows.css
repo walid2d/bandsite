@@ -58,8 +58,17 @@ html {
 }
 
 .hero {
-  background-image: url("../assets/Images/hero-shows.jpg");
+  background-image: linear-gradient(to top, rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url("../assets/Images/hero-shows.jpg");
   justify-content: space-evenly;
+}
+@media screen and (max-width: 1279px) {
+  .hero {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 3.6rem;
+    padding: 4.8rem 3.6rem 3.6rem 3.6rem;
+  }
 }
 .hero__box {
   display: flex;
@@ -80,6 +89,139 @@ html {
   line-height: 6.8rem;
 }
 .hero__scloud {
-  width: 40%;
+  min-width: 40%;
   height: 11vw;
+}
+
+.table {
+  background-color: white;
+  padding: 4.8rem 3.6rem 3.6rem 3.6rem;
+}
+.table__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3.6rem;
+}
+.table__text-content {
+  width: 77%;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 15rem;
+}
+@media screen and (max-width: 1279px) {
+  .table__text-content {
+    width: 100%;
+    gap: 3.6rem;
+    flex-wrap: wrap;
+  }
+}
+.table__heading {
+  font-family: "avenir";
+  font-weight: 700;
+  color: #323232;
+  font-size: 3.6rem;
+  line-height: 4.4rem;
+}
+@media screen and (max-width: 1279px) {
+  .table__heading {
+    width: 100%;
+  }
+}
+.table__box {
+  flex-basis: 80%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+@media screen and (max-width: 1279px) {
+  .table__box {
+    flex-basis: 100%;
+  }
+}
+.table__text {
+  width: 35%;
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  font-family: "avenir";
+  font-weight: 700;
+  color: #afafaf;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 1279px) {
+  .table__text {
+    width: 23%;
+  }
+}
+.table__text--mod {
+  width: 23%;
+  margin-right: 1rem;
+}
+.table__ticket-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-left: auto;
+}
+@media screen and (max-width: 1279px) {
+  .table__ticket-wrapper {
+    justify-content: flex-start;
+  }
+}
+
+.ticket {
+  width: 67.5%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+@media screen and (max-width: 1279px) {
+  .ticket {
+    width: 94%;
+    gap: 6rem;
+  }
+}
+.ticket__date, .ticket__name, .ticket__place {
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  font-family: "avenir";
+  font-weight: 700;
+  color: #323232;
+}
+.ticket__date {
+  min-width: 29%;
+}
+@media screen and (max-width: 1279px) {
+  .ticket__date {
+    min-width: 18%;
+  }
+}
+.ticket__name {
+  font-weight: 400;
+  width: 20%;
+}
+@media screen and (max-width: 1279px) {
+  .ticket__name {
+    min-width: 18%;
+  }
+}
+.ticket__place {
+  font-weight: 400;
+  width: 20%;
+  margin-right: 2rem;
+}
+@media screen and (max-width: 1279px) {
+  .ticket__place {
+    min-width: 17%;
+  }
+}
+.ticket__btn {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
 }

@@ -230,3 +230,21 @@ html {
     }
   }
 }
+.btn {
+  background-color: $black;
+  align-self: flex-end;
+  display: inline-flex;
+  justify-content: center;
+  border: none;
+  border-radius: 0.4rem;
+  text-transform: uppercase;
+  padding: 0 3.2rem;
+  height: 4.8rem;
+  min-width: 15rem;
+  margin-top: 2rem;
+  @include text-size(1.8rem, 1.3rem);
+  @include text-style(700, white);
+  &:hover {
+    background-color: $bandsite-black;
+  }
+}
