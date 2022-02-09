@@ -46,52 +46,6 @@
   font-style: normal;
   font-display: swap;
 }
-.herobox {
-  background-image: linear-gradient(to top, rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url("../assets/Images/hero-bio.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  height: 60vw;
-  max-width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  align-content: stretch;
-}
-@media screen and (max-width: 1279px) {
-  .herobox {
-    max-height: 60vw;
-  }
-}
-@media screen and (max-width: 767px) {
-  .herobox {
-    max-height: 60vw;
-  }
-}
-.herobox__text {
-  font-family: "avenir";
-  font-weight: 700;
-  color: white;
-  font-size: 6rem;
-  line-height: 6.8rem;
-  width: 86%;
-}
-@media screen and (max-width: 1279px) {
-  .herobox__text {
-    width: 100%;
-    padding: 0rem 3.6rem;
-  }
-}
-@media screen and (max-width: 767px) {
-  .herobox__text {
-    max-height: 60vw;
-    padding: 0 1.6rem 0 1.6rem;
-    font-size: 2.4rem;
-    line-height: 3.2rem;
-  }
-}
-
 .article, .comment {
   background-color: white;
   display: flex;

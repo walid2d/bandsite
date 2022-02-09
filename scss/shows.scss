@@ -1,3 +1,5 @@
+@use "./partials/variables" as *;
+@use "./partials/mixins" as *;
 * {
   margin: 0;
   padding: 0;
@@ -6,4 +8,24 @@ html {
   box-sizing: border-box;
   scroll-behavior: smooth;
   font-size: 62.5%;
+}
+.hero {
+  background-image: url("../assets/Images/hero-shows.jpg");
+  justify-content: space-evenly;
+  &__box {
+    display: flex;
+    flex-direction: column;
+  }
+  &__text {
+    @include text-style(600, white);
+    @include text-size(3.2rem, 2.4rem);
+  }
+  &__text-dif {
+    @include text-style(700, white);
+    @include text-size(6.8rem, 6rem);
+  }
+  &__scloud {
+    width: 40%;
+    height: 11vw;
+  }
 }
