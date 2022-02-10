@@ -197,7 +197,7 @@
 .article__sub-heading {
   padding-top: 0;
 }
-.article__text {
+.article__text, .user-comment__name, .user-comment__date, .user-comment__text {
   font-size: 1.4rem;
   line-height: 2.2rem;
   font-family: "avenir";
@@ -208,7 +208,7 @@
   padding: 0;
 }
 @media screen and (max-width: 767px) {
-  .article__text {
+  .article__text, .user-comment__name, .user-comment__date, .user-comment__text {
     font-size: 1.3rem;
     line-height: 1.8rem;
     width: 100%;
@@ -281,12 +281,20 @@
   }
 }
 
+.comment {
+  gap: 0;
+}
 .form {
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
   width: 40%;
-  margin-top: 4rem;
+  margin: 4rem 0;
+}
+@media screen and (max-width: 1279px) {
+  .form {
+    width: 73%;
+  }
 }
 .form__label {
   font-size: 1.3rem;
@@ -301,6 +309,8 @@
   height: 4.8rem;
   width: 4.8rem;
   border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .form__input {
   padding: 1.5rem;
@@ -323,4 +333,59 @@
 }
 .form__input-comment:focus {
   outline: 1px solid #000000;
+}
+
+.user-comment {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid #e1e1e1;
+  max-width: 48rem;
+}
+@media screen and (max-width: 1279px) {
+  .user-comment {
+    max-width: 89rem;
+  }
+}
+.user-comment__box {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  max-width: 80rem;
+  border-top: 1px solid #e1e1e1;
+  padding: 2rem 0 2rem 0;
+}
+@media screen and (max-width: 1279px) {
+  .user-comment__box {
+    max-width: 89rem;
+  }
+}
+.user-comment__wrapper {
+  display: flex;
+  flex-direction: row;
+}
+.user-comment__img {
+  background-image: url(../assets/Images/hero-shows.jpg);
+  background-size: cover;
+  height: 4.8rem;
+  width: 4.8rem;
+  border-radius: 50%;
+  margin: 0rem 1rem -3rem -6rem;
+}
+.user-comment__name, .user-comment__date, .user-comment__text {
+  margin: 0;
+  padding: 0;
+}
+.user-comment__name {
+  font-weight: 600;
+}
+.user-comment__date {
+  flex: 1;
+  color: #afafaf;
+  display: flex;
+  justify-content: flex-end;
+}
+.user-comment__text {
+  align-self: flex-start;
+  width: 100%;
 }
