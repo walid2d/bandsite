@@ -168,7 +168,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
-  width: 35%;
+  width: 40%;
   margin-top: 4rem;
 
   &__label {
@@ -189,20 +189,19 @@
     border: 1px solid $mercury;
     box-sizing: border-box;
     background-color: $alabaster;
-    &:active {
-      border-color: $bandsite-black;
+    &:focus {
+      outline: 1px solid $bandsite-black;
     }
   }
   &__input-comment {
-    padding: 1.5rem;
-    height: 12rem;
-    min-width: 4.8rem;
+    min-height: 13rem;
+    min-width: 13rem;
     box-sizing: border-box;
     border-radius: 0.4rem;
     border: 1px solid $mercury;
     background-color: $alabaster;
-    &:active {
-      border-color: $bandsite-black;
+    &:focus {
+      outline: 1px solid $bandsite-black;
     }
   }
 }
