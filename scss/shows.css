@@ -61,6 +61,7 @@ html {
   background-image: linear-gradient(to top, rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url("../assets/Images/hero-shows.jpg");
   justify-content: space-evenly;
   padding: 4.8rem 3.6rem 3.6rem 3.6rem;
+  height: 55vw;
 }
 @media screen and (max-width: 1279px) {
   .hero {
@@ -68,11 +69,13 @@ html {
     align-items: flex-start;
     justify-content: center;
     gap: 3.6rem;
+    max-height: 55vw;
   }
 }
 @media screen and (max-width: 767px) {
   .hero {
     padding: 0 1.6rem 0 1.6rem;
+    align-items: center;
     gap: 1.6rem;
     min-height: 75vw;
   }
@@ -80,11 +83,13 @@ html {
 .hero__wrapper {
   display: flex;
   flex-direction: column;
-  width: 42%;
-  gap: 2.6rem;
+  width: 48vw;
+  gap: 3.6vh;
 }
 @media screen and (max-width: 767px) {
   .hero__wrapper {
+    width: 100%;
+    align-items: flex-start;
     gap: 1.6rem;
   }
 }
@@ -117,19 +122,19 @@ html {
   }
 }
 .hero__scloud {
-  min-width: 50%;
-  height: 15vw;
+  min-width: 39%;
+  height: 14vw;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1279px) {
   .hero__scloud {
-    min-width: 100%;
-    height: 20vw;
+    min-width: 70%;
+    height: 24vw;
   }
 }
 @media screen and (max-width: 767px) {
   .hero__scloud {
-    max-width: 80%;
-    height: 35vw;
+    min-width: 100%;
+    height: 26vw;
   }
 }
 
@@ -149,11 +154,16 @@ html {
   align-items: center;
   gap: 1.6rem;
 }
+@media screen and (max-width: 767px) {
+  .table__wrapper {
+    gap: 0;
+  }
+}
 .table__text-content {
   align-self: center;
   display: flex;
   justify-content: flex-start;
-  width: 95%;
+  width: 92%;
 }
 @media screen and (max-width: 1279px) {
   .table__text-content {
@@ -168,25 +178,42 @@ html {
   color: #323232;
   font-size: 3.6rem;
   line-height: 4.4rem;
-  margin-right: 10.5vw;
+  margin-right: 13%;
 }
-.table__box {
+@media screen and (max-width: 767px) {
+  .table__heading {
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+  }
+}
+.table__ticket-wrapper {
+  min-width: 66%;
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
-  width: 37vw;
+  flex-direction: column;
+  justify-content: center;
+  align-items: inherit;
+  margin-left: 15%;
 }
 @media screen and (max-width: 1279px) {
-  .table__box {
-    width: 62vw;
+  .table__ticket-wrapper {
+    min-width: 100%;
+    align-items: center;
+    margin: 0;
   }
+}
+
+.table__box {
+  display: flex;
+  justify-content: stretch;
+  align-items: flex-end;
+  width: 100%;
 }
 @media screen and (max-width: 767px) {
   .table__box {
     display: none;
   }
 }
-.table__text {
+.table__box-date, .table__box-venue, .table__box-location {
   font-size: 1.3rem;
   line-height: 1.8rem;
   font-family: "avenir";
@@ -194,89 +221,69 @@ html {
   color: #afafaf;
   text-transform: uppercase;
 }
-.table__text--mod {
-  flex-basis: 17vw;
+.table__box-date {
+  min-width: 23%;
 }
 @media screen and (max-width: 1279px) {
-  .table__text--mod {
-    flex-basis: 29vw;
+  .table__box-date {
+    min-width: 27%;
   }
 }
-.table__text--mod-venue {
-  flex-basis: 11.5vw;
+.table__box-venue {
+  min-width: 24.5%;
 }
 @media screen and (max-width: 1279px) {
-  .table__text--mod-venue {
-    flex-basis: 27vw;
+  .table__box-venue {
+    min-width: 25%;
   }
 }
-.table__ticket-wrapper {
-  min-width: 120rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: inherit;
-}
-@media screen and (max-width: 1279px) {
-  .table__ticket-wrapper {
-    min-width: 95vw;
-    align-items: center;
-  }
+.table__box-location {
+  min-width: auto;
 }
 
 .ticket {
-  width: 60vw;
+  width: 100%;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: space-between;
   padding: 2rem 0;
   border-bottom: 1px solid #e1e1e1;
 }
 @media screen and (max-width: 1279px) {
   .ticket {
-    min-width: 94vw;
+    justify-content: stretch;
+    width: 100%;
     justify-content: space-between;
-    margin: 0;
   }
 }
 @media screen and (max-width: 767px) {
   .ticket {
     flex-direction: column;
+    width: 100%;
+    gap: 1rem;
   }
 }
-.ticket__date, .ticket__name, .ticket__place {
-  font-size: 1.3rem;
+.ticket__date, .ticket__name, .ticket__place, .ticket__btn {
+  font-size: 1.4rem;
   line-height: 1.8rem;
   font-family: "avenir";
   font-weight: 700;
   color: #323232;
+  min-width: 22%;
+  margin: 0;
+  padding: 0;
 }
-.ticket__date {
-  min-width: 29%;
-}
-@media screen and (max-width: 1279px) {
+@media screen and (max-width: 767px) {
   .ticket__date {
-    min-width: 24vw;
+    align-self: flex-start;
   }
 }
-.ticket__name {
+.ticket__name, .ticket__place {
   font-weight: 400;
-  width: 20%;
 }
-@media screen and (max-width: 1279px) {
-  .ticket__name {
-    min-width: 15%;
-    margin-right: 5vw;
-  }
-}
-.ticket__place {
-  font-weight: 400;
-  width: 20%;
-  margin-right: 2rem;
-}
-@media screen and (max-width: 1279px) {
-  .ticket__place {
-    min-width: 20%;
+@media screen and (max-width: 767px) {
+  .ticket__name, .ticket__place {
+    width: 100%;
   }
 }
 .ticket__btn {
@@ -284,6 +291,30 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0;
-  padding: 0;
+  color: white;
+}
+@media screen and (max-width: 767px) {
+  .ticket__btn {
+    width: 100%;
+  }
+}
+.ticket__label {
+  display: none;
+}
+@media screen and (max-width: 1279px) {
+  .ticket__label {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .ticket__label {
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+    font-family: "avenir";
+    font-weight: 700;
+    color: #afafaf;
+    text-transform: uppercase;
+    align-self: flex-start;
+    display: inline-flex;
+  }
 }

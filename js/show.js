@@ -2,17 +2,17 @@
 
 const showsArr = [
   {
-    date: "Wed June 08 2022",
+    date: "Wed Jun 08 2022",
     venue: "Gleneagle Arena",
     location: "Dublin, ireland",
   },
   {
-    date: "Fri June 10 2022",
+    date: "Fri Jun 10 2022",
     venue: "St Annes Park",
     location: "Dublin, ireland",
   },
   {
-    date: "Sat June 11 2022",
+    date: "Sat Jun 11 2022",
     venue: "St Annes Park",
     location: "Dublin, ireland",
   },
@@ -32,19 +32,6 @@ const showsArr = [
     location: "Dublin, ireland",
   },
 ];
-// {/* <div class="ticket">
-//>
-// <h3 class="ticket__date">Mon Sept 06 2021</h3>
-//>
-
-// <p class="ticket__name">Ronald Lane</p>
-//>
-
-// <p class="ticket__place">San Francisco,CA</p>
-//>
-
-// <a href="" class="ticket__btn btn">buy tickets</a>
-// </div> */}
 
 const tableTicketWrapper = document.querySelector(".table__ticket-wrapper");
 const createTickets = function (arr) {
