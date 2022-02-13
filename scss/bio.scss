@@ -218,10 +218,10 @@
 .user-comment {
   @include flex($direction: column);
   border-bottom: 1px solid $mercury;
-  max-width: 48%;
+  max-width: 50%;
 
   @include fix(tablet) {
-    max-width: 83%;
+    max-width: 85.5%;
   }
   @include fix(phone) {
     max-width: 100%;

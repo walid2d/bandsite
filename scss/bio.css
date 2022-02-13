@@ -370,11 +370,11 @@
   flex-direction: column;
   align-content: stretch;
   border-bottom: 1px solid #e1e1e1;
-  max-width: 48%;
+  max-width: 50%;
 }
 @media screen and (max-width: 1279px) {
   .user-comment {
-    max-width: 83%;
+    max-width: 85.5%;
   }
 }
 @media screen and (max-width: 767px) {

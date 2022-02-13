@@ -39,9 +39,6 @@ const createTickets = function (arr) {
     // ticket container
     const ticket = document.createElement("div");
     ticket.classList.add("ticket");
-    ticket.addEventListener("click", function (e) {
-      e.target.classList.toggle("ticket__active");
-    });
     //label
     const dateLabel = document.createElement("p");
     dateLabel.classList.add("ticket__label", "label");
@@ -75,6 +72,9 @@ const createTickets = function (arr) {
       "href",
       "https://www.ticketmaster.ca/dermot-kennedy-tickets/artist/2089473"
     );
+    ticket.addEventListener("click", function (e) {
+      e.target.classList.toggle("ticket__active");
+    });
     ticket.appendChild(dateLabel);
     ticket.appendChild(ticketDate);
     ticket.appendChild(venueLabel);
