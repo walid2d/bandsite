@@ -212,6 +212,9 @@
     min-height: 13rem;
     min-width: 13rem;
     @extend .form__input;
+    @include fix(phone) {
+      min-height: 10rem;
+    }
   }
 }
 

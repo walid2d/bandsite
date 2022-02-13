@@ -362,6 +362,11 @@
   min-height: 13rem;
   min-width: 13rem;
 }
+@media screen and (max-width: 767px) {
+  .form__input-comment {
+    min-height: 10rem;
+  }
+}
 
 .user-comment {
   display: flex;
