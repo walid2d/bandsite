@@ -230,11 +230,18 @@ html {
     }
   }
 }
+.label {
+  @include text-size(1.8rem, 1.2rem);
+  @include text-style(700, $silver);
+  text-transform: uppercase;
+  @include fix(phone) {
+    font-size: 1rem;
+  }
+}
 .btn {
   background-color: $black;
+  @include flex($items: stretch);
   align-self: flex-end;
-  display: inline-flex;
-  justify-content: center;
   border: none;
   border-radius: 0.4rem;
   text-transform: uppercase;
@@ -242,9 +249,17 @@ html {
   height: 4.8rem;
   min-width: 15rem;
   margin-top: 2rem;
-  @include text-size(1.8rem, 1.3rem);
+  @include text-size(2rem, 1.2rem);
   @include text-style(700, white);
+  @include fix(phone) {
+    font-size: 1rem;
+  }
   &:hover {
-    background-color: $bandsite-black;
+    background-color: $bandsite-black !important;
+  }
+  &--bio {
+    @include fix(phone) {
+      width: 100%;
+    }
   }
 }

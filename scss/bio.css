@@ -286,25 +286,28 @@
 }
 .form {
   display: flex;
+  align-items: stretch;
+  justify-content: center;
   flex-direction: column;
+  align-content: stretch;
   gap: 0.2rem;
   width: 40%;
   margin: 4rem 0;
 }
 @media screen and (max-width: 1279px) {
   .form {
-    width: 73%;
+    min-width: 73%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .form {
+    align-self: flex-end;
   }
 }
 .form__label {
-  font-size: 1.3rem;
-  line-height: 1.8rem;
-  font-family: "avenir";
-  font-weight: 700;
-  color: #afafaf;
   margin: 0.4rem;
 }
-.form__img {
+.form__img, .user-comment__img {
   margin: 0rem 0rem -7.3rem -6rem;
   height: 4.8rem;
   width: 4.8rem;
@@ -312,80 +315,105 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
-.form__input {
-  padding: 1.5rem;
+@media screen and (max-width: 767px) {
+  .form__img, .user-comment__img {
+    width: 3.6rem;
+    height: 3.6rem;
+  }
+}
+.form__input, .form__input-comment {
+  padding: 1.6rem;
   min-width: 4.8rem;
   border-radius: 0.4rem;
   border: 1px solid #e1e1e1;
-  box-sizing: border-box;
   background-color: #fafafa;
 }
-.form__input:focus {
+@media screen and (max-width: 767px) {
+  .form__input, .form__input-comment {
+    min-width: 3.6rem;
+    padding: 1.2rem;
+  }
+}
+.form__input:focus, .form__input-comment:focus {
   outline: 1px solid #000000;
+}
+.form__input::-moz-placeholder, .form__input-comment::-moz-placeholder {
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  font-family: "avenir";
+  font-weight: 400;
+  color: #323232;
+}
+.form__input:-ms-input-placeholder, .form__input-comment:-ms-input-placeholder {
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  font-family: "avenir";
+  font-weight: 400;
+  color: #323232;
+}
+.form__input::placeholder, .form__input-comment::placeholder {
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  font-family: "avenir";
+  font-weight: 400;
+  color: #323232;
 }
 .form__input-comment {
   min-height: 13rem;
   min-width: 13rem;
-  box-sizing: border-box;
-  border-radius: 0.4rem;
-  border: 1px solid #e1e1e1;
-  background-color: #fafafa;
-}
-.form__input-comment:focus {
-  outline: 1px solid #000000;
 }
 
 .user-comment {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  align-content: stretch;
   border-bottom: 1px solid #e1e1e1;
-  max-width: 48rem;
+  max-width: 48%;
 }
 @media screen and (max-width: 1279px) {
   .user-comment {
-    max-width: 89rem;
+    max-width: 83%;
   }
 }
+@media screen and (max-width: 767px) {
+  .user-comment {
+    max-width: 100%;
+  }
+}
+.user-comment__wrapper, .user-comment__box, .user-comment__text {
+  width: 100%;
+}
 .user-comment__box {
-  align-self: center;
   display: flex;
-  flex-direction: column;
-  max-width: 80rem;
+  gap: 1.6rem;
   border-top: 1px solid #e1e1e1;
   padding: 2rem 0 2rem 0;
 }
-@media screen and (max-width: 1279px) {
-  .user-comment__box {
-    max-width: 89rem;
-  }
-}
-.user-comment__wrapper {
+.user-comment__text-box {
   display: flex;
+  align-items: stretch;
+  justify-content: space-between;
   flex-direction: row;
+  align-content: stretch;
 }
 .user-comment__img {
-  background-image: url(../assets/Images/hero-shows.jpg);
-  background-size: cover;
-  height: 4.8rem;
-  width: 4.8rem;
-  border-radius: 50%;
-  margin: 0rem 1rem -3rem -6rem;
+  margin: 0;
+  align-self: baseline;
+  background-color: #e1e1e1;
 }
 .user-comment__name, .user-comment__date, .user-comment__text {
   margin: 0;
   padding: 0;
+  width: auto;
 }
 .user-comment__name {
   font-weight: 600;
 }
 .user-comment__date {
-  flex: 1;
   color: #afafaf;
-  display: flex;
-  justify-content: flex-end;
 }
 .user-comment__text {
   align-self: flex-start;
-  width: 100%;
 }

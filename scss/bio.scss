@@ -160,24 +160,23 @@
 .comment {
   @extend .article;
   gap: 0;
-
   &__header {
     @extend .gallery__heading;
   }
 }
 .form {
-  display: flex;
-  flex-direction: column;
+  @include flex($direction: column, $items: stretch);
   gap: 0.2rem;
   width: 40%;
   margin: 4rem 0;
   @include fix(tablet) {
-    width: 73%;
+    min-width: 73%;
+  }
+  @include fix(phone) {
+    align-self: flex-end;
   }
 
   &__label {
-    @include text-size(1.8rem, 1.3rem);
-    @include text-style(700, $silver);
     margin: 0.4rem;
   }
   &__img {
@@ -186,64 +185,70 @@
     width: 4.8rem;
     border-radius: 50%;
     object-fit: cover;
+    @include fix(phone) {
+      width: 3.6rem;
+      height: 3.6rem;
+    }
   }
   &__input {
-    padding: 1.5rem;
+    padding: 1.6rem;
     min-width: 4.8rem;
     border-radius: 0.4rem;
     border: 1px solid $mercury;
-    box-sizing: border-box;
     background-color: $alabaster;
+    @include fix(phone) {
+      min-width: 3.6rem;
+      padding: 1.2rem;
+    }
     &:focus {
       outline: 1px solid $bandsite-black;
+    }
+    &::placeholder {
+      @include text-size(2.2rem, 1.4rem);
+      @include text-style(400);
     }
   }
   &__input-comment {
     min-height: 13rem;
     min-width: 13rem;
-    box-sizing: border-box;
-    border-radius: 0.4rem;
-    border: 1px solid $mercury;
-    background-color: $alabaster;
-    &:focus {
-      outline: 1px solid $bandsite-black;
-    }
+    @extend .form__input;
   }
 }
 
 .user-comment {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include flex($direction: column);
   border-bottom: 1px solid $mercury;
-  max-width: 48rem;
+  max-width: 48%;
 
   @include fix(tablet) {
-    max-width: 89rem;
+    max-width: 83%;
+  }
+  @include fix(phone) {
+    max-width: 100%;
   }
 
+  &__wrapper,
+  &__box,
+  &__text {
+    width: 100%;
+  }
   &__box {
-    align-self: center;
     display: flex;
-    flex-direction: column;
-    max-width: 80rem;
+    gap: 1.6rem;
     border-top: 1px solid $mercury;
     padding: 2rem 0 2rem 0;
     @include fix(tablet) {
-      max-width: 89rem;
     }
   }
-  &__wrapper {
-    display: flex;
-    flex-direction: row;
+  &__text-box {
+    @include flex($content: space-between, $items: stretch);
   }
+
   &__img {
-    background-image: url(../assets/Images/hero-shows.jpg);
-    background-size: cover;
-    height: 4.8rem;
-    width: 4.8rem;
-    border-radius: 50%;
-    margin: 0rem 1rem -3rem -6rem;
+    @extend .form__img;
+    margin: 0;
+    align-self: baseline;
+    background-color: $mercury;
   }
   &__name,
   &__date,
@@ -251,38 +256,16 @@
     @extend .article__text;
     margin: 0;
     padding: 0;
+    width: auto;
   }
   &__name {
     font-weight: 600;
   }
   &__date {
-    flex: 1;
     color: $silver;
-    display: flex;
-    justify-content: flex-end;
   }
   &__text {
     align-self: flex-start;
     @extend .article__text;
-    width: 100%;
   }
 }
-
-// .btn {
-//   background-color: $black;
-//   align-self: flex-end;
-//   display: inline-flex;
-//   justify-content: center;
-//   border: none;
-//   border-radius: 0.4rem;
-//   text-transform: uppercase;
-//   padding: 0 3.2rem;
-//   height: 4.8rem;
-//   min-width: 15rem;
-//   margin-top: 2rem;
-//   @include text-size(1.8rem, 1.3rem);
-//   @include text-style(700, white);
-//   &:hover {
-//     background-color: $bandsite-black;
-//   }
-// }

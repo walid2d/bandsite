@@ -36,13 +36,15 @@ const showsArr = [
 const tableTicketWrapper = document.querySelector(".table__ticket-wrapper");
 const createTickets = function (arr) {
   arr.forEach(function (k, i) {
-    console.log(k);
     // ticket container
     const ticket = document.createElement("div");
     ticket.classList.add("ticket");
+    ticket.addEventListener("click", function (e) {
+      e.target.classList.toggle("ticket__active");
+    });
     //label
     const dateLabel = document.createElement("p");
-    dateLabel.classList.add("ticket__label");
+    dateLabel.classList.add("ticket__label", "label");
     const labelText = Object.keys(k);
     dateLabel.textContent = labelText[0];
     // ticket date
@@ -51,7 +53,7 @@ const createTickets = function (arr) {
     ticketDate.classList.add("ticket__date");
     //label
     const venueLabel = document.createElement("p");
-    venueLabel.classList.add("ticket__label");
+    venueLabel.classList.add("ticket__label", "label");
     venueLabel.textContent = labelText[1];
     // ticket__name
     const ticketName = document.createElement("h3");
@@ -59,7 +61,7 @@ const createTickets = function (arr) {
     ticketName.classList.add("ticket__name");
     //label
     const locationLabel = document.createElement("p");
-    locationLabel.classList.add("ticket__label");
+    locationLabel.classList.add("ticket__label", "label");
     locationLabel.textContent = labelText[2];
     //ticket place
     const ticketPlace = document.createElement("h3");

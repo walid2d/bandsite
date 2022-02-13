@@ -128,65 +128,27 @@
       <h2 class="comment__header">Join the Conversation</h2>
       <form class="form">
         <img class="form__img" src="../assets/Images/Mohan-muruge.jpg" />
-        <label for="name" class="form__label">Name</label>
+        <label for="name" class="form__label label">Name</label>
         <input
           type="text"
           class="form__input"
-          name="name"
+          name="username"
           placeholder="Enter your name"
           autocomple="off"
         />
-        <label for="comment" class="form__label">Comment</label>
+        <label for="comment" class="form__label label">Comment</label>
         <textarea
           type="text"
           class="form__input-comment"
-          name="comment"
+          name="usercomment"
           autocomple="off"
-          placeholder="comment"
+          placeholder="Add a comment"
           spellcheck="true"
         ></textarea>
         <input type="submit" class="btn btn--bio" value="Comment" />
       </form>
       <section class="user-comment">
-        <div class="user-comment__box">
-          <div class="user-comment__wrapper">
-            <div class="user-comment__img"></div>
-            <h3 class="user-comment__name">john smith</h3>
-            <h4 class="user-comment__date">11/11/2030</h4>
-          </div>
-          <p class="user-comment__text">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat
-            autem incidunt amet, corrupti, aspernatur voluptates fugit nisi
-            veniam provident dolorem vitae laborum aliquid porro labore nobis
-            harum ullam, tempora animi.
-          </p>
-        </div>
-        <div class="user-comment__box">
-          <div class="user-comment__wrapper">
-            <div class="user-comment__img"></div>
-            <h3 class="user-comment__name">john smith</h3>
-            <h4 class="user-comment__date">11/11/2030</h4>
-          </div>
-          <p class="user-comment__text">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat
-            autem incidunt amet, corrupti, aspernatur voluptates fugit nisi
-            veniam provident dolorem vitae laborum aliquid porro labore nobis
-            harum ullam, tempora animi.
-          </p>
-        </div>
-        <div class="user-comment__box">
-          <div class="user-comment__wrapper">
-            <div class="user-comment__img"></div>
-            <h3 class="user-comment__name">john smith</h3>
-            <h4 class="user-comment__date">11/11/2030</h4>
-          </div>
-          <p class="user-comment__text">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat
-            autem incidunt amet, corrupti, aspernatur voluptates fugit nisi
-            veniam provident dolorem vitae laborum aliquid porro labore nobis
-            harum ullam, tempora animi.
-          </p>
-        </div>
+        <!-- comments are dynamically generated -->
       </section>
     </aside>
     <footer class="footer">

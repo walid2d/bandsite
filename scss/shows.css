@@ -57,19 +57,24 @@ html {
   font-size: 62.5%;
 }
 
+.hero,
+.table {
+  padding: 4.8rem 3.6rem 3.6rem 3.6rem;
+}
+
 .hero {
   background-image: linear-gradient(to top, rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url("../assets/Images/hero-shows.jpg");
   justify-content: space-evenly;
-  padding: 4.8rem 3.6rem 3.6rem 3.6rem;
   height: 55vw;
 }
 @media screen and (max-width: 1279px) {
   .hero {
-    flex-direction: column;
+    display: flex;
     align-items: flex-start;
     justify-content: center;
+    flex-direction: column;
+    align-content: stretch;
     gap: 3.6rem;
-    max-height: 55vw;
   }
 }
 @media screen and (max-width: 767px) {
@@ -82,7 +87,10 @@ html {
 }
 .hero__wrapper {
   display: flex;
+  align-items: stretch;
+  justify-content: center;
   flex-direction: column;
+  align-content: stretch;
   width: 48vw;
   gap: 3.6vh;
 }
@@ -140,7 +148,6 @@ html {
 
 .table {
   background-color: white;
-  padding: 4.8rem 3.6rem 3.6rem 3.6rem;
 }
 @media screen and (max-width: 767px) {
   .table {
@@ -149,9 +156,10 @@ html {
 }
 .table__wrapper {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  align-content: stretch;
   gap: 1.6rem;
 }
 @media screen and (max-width: 767px) {
@@ -160,9 +168,12 @@ html {
   }
 }
 .table__text-content {
-  align-self: center;
   display: flex;
+  align-items: stretch;
   justify-content: flex-start;
+  flex-direction: row;
+  align-content: stretch;
+  align-self: center;
   width: 92%;
 }
 @media screen and (max-width: 1279px) {
@@ -189,10 +200,15 @@ html {
 .table__ticket-wrapper {
   min-width: 66%;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: inherit;
+  justify-content: center;
+  flex-direction: column;
+  align-content: stretch;
   margin-left: 15%;
+}
+.table__ticket-wrapper :hover {
+  background-color: #fafafa;
+  background-position: cover;
 }
 @media screen and (max-width: 1279px) {
   .table__ticket-wrapper {
@@ -204,8 +220,10 @@ html {
 
 .table__box {
   display: flex;
-  justify-content: stretch;
   align-items: flex-end;
+  justify-content: stretch;
+  flex-direction: row;
+  align-content: stretch;
   width: 100%;
 }
 @media screen and (max-width: 767px) {
@@ -242,26 +260,28 @@ html {
 }
 
 .ticket {
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2rem 0;
+  flex-direction: row;
+  align-content: stretch;
+  width: 100%;
+  padding: 2.4rem 1.8rem;
   border-bottom: 1px solid #e1e1e1;
 }
 @media screen and (max-width: 1279px) {
   .ticket {
-    justify-content: stretch;
-    width: 100%;
     justify-content: space-between;
   }
 }
 @media screen and (max-width: 767px) {
   .ticket {
     flex-direction: column;
-    width: 100%;
     gap: 1rem;
   }
+}
+.ticket__active {
+  background-color: #e1e1e1;
 }
 .ticket__date, .ticket__name, .ticket__place, .ticket__btn {
   font-size: 1.4rem;
@@ -289,8 +309,10 @@ html {
 .ticket__btn {
   text-decoration: none;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  align-content: stretch;
   color: white;
 }
 @media screen and (max-width: 767px) {
@@ -308,13 +330,7 @@ html {
 }
 @media screen and (max-width: 767px) {
   .ticket__label {
-    font-size: 1.3rem;
-    line-height: 1.8rem;
-    font-family: "avenir";
-    font-weight: 700;
-    color: #afafaf;
-    text-transform: uppercase;
     align-self: flex-start;
-    display: inline-flex;
+    display: flex;
   }
 }
