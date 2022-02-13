@@ -165,6 +165,52 @@ html {
   }
 }
 
+.herobox {
+  background-image: linear-gradient(to top, rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url("../assets/Images/hero-bio.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 60vw;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  align-content: stretch;
+}
+@media screen and (max-width: 1279px) {
+  .herobox {
+    max-height: 60vw;
+  }
+}
+@media screen and (max-width: 767px) {
+  .herobox {
+    max-height: 60vw;
+  }
+}
+.herobox__text {
+  font-family: "avenir";
+  font-weight: 700;
+  color: white;
+  font-size: 6rem;
+  line-height: 6.8rem;
+  width: 86%;
+}
+@media screen and (max-width: 1279px) {
+  .herobox__text {
+    width: 100%;
+    padding: 0rem 3.6rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .herobox__text {
+    max-height: 60vw;
+    padding: 0 1.6rem 0 1.6rem;
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+  }
+}
+
 .footer {
   display: flex;
   align-items: center;
@@ -183,7 +229,7 @@ html {
   display: flex;
   flex-direction: column;
   gap: 4.8rem;
-  width: 88%;
+  width: 88vw;
 }
 @media screen and (max-width: 1279px) {
   .footer__container {
@@ -331,5 +377,54 @@ html {
 @media screen and (max-width: 767px) {
   .footer__logo-bottom {
     display: inline-flex;
+  }
+}
+
+.label {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  font-family: "avenir";
+  font-weight: 700;
+  color: #afafaf;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 767px) {
+  .label {
+    font-size: 1rem;
+  }
+}
+
+.btn {
+  background-color: #323232;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  flex-direction: row;
+  align-content: stretch;
+  align-self: flex-end;
+  border: none;
+  border-radius: 0.4rem;
+  text-transform: uppercase;
+  padding: 0 3.2rem;
+  height: 4.8rem;
+  min-width: 15rem;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  font-family: "avenir";
+  font-weight: 700;
+  color: white;
+}
+@media screen and (max-width: 767px) {
+  .btn {
+    font-size: 1rem;
+  }
+}
+.btn:hover {
+  background-color: #000000 !important;
+}
+@media screen and (max-width: 767px) {
+  .btn--bio {
+    width: 100%;
   }
 }

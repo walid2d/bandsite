@@ -46,53 +46,7 @@
   font-style: normal;
   font-display: swap;
 }
-.herobox {
-  background-image: linear-gradient(to top, rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url("../assets/Images/hero-bio.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  height: 60vw;
-  max-width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  align-content: stretch;
-}
-@media screen and (max-width: 1279px) {
-  .herobox {
-    max-height: 60vw;
-  }
-}
-@media screen and (max-width: 767px) {
-  .herobox {
-    max-height: 60vw;
-  }
-}
-.herobox__text {
-  font-family: "avenir";
-  font-weight: 700;
-  color: white;
-  font-size: 6rem;
-  line-height: 6.8rem;
-  width: 86%;
-}
-@media screen and (max-width: 1279px) {
-  .herobox__text {
-    width: 100%;
-    padding: 0rem 3.6rem;
-  }
-}
-@media screen and (max-width: 767px) {
-  .herobox__text {
-    max-height: 60vw;
-    padding: 0 1.6rem 0 1.6rem;
-    font-size: 2.4rem;
-    line-height: 3.2rem;
-  }
-}
-
-.article {
+.article, .comment {
   background-color: white;
   display: flex;
   align-items: center;
@@ -103,12 +57,12 @@
   padding: 4.8rem 3.6rem 3.6rem 3.6rem;
 }
 @media screen and (max-width: 767px) {
-  .article {
+  .article, .comment {
     padding: 2.4rem 1.6rem 1.6rem 1.6rem;
     gap: 1.6rem;
   }
 }
-.article__heading, .gallery__heading {
+.article__heading, .gallery__heading, .comment__header {
   font-family: "avenir";
   font-weight: 700;
   color: #323232;
@@ -118,12 +72,12 @@
   width: 87%;
 }
 @media screen and (max-width: 1279px) {
-  .article__heading, .gallery__heading {
+  .article__heading, .gallery__heading, .comment__header {
     width: 100%;
   }
 }
 @media screen and (max-width: 767px) {
-  .article__heading, .gallery__heading {
+  .article__heading, .gallery__heading, .comment__header {
     font-size: 2.4rem;
     line-height: 3.2rem;
   }
@@ -243,7 +197,7 @@
 .article__sub-heading {
   padding-top: 0;
 }
-.article__text {
+.article__text, .user-comment__name, .user-comment__date, .user-comment__text {
   font-size: 1.4rem;
   line-height: 2.2rem;
   font-family: "avenir";
@@ -254,7 +208,7 @@
   padding: 0;
 }
 @media screen and (max-width: 767px) {
-  .article__text {
+  .article__text, .user-comment__name, .user-comment__date, .user-comment__text {
     font-size: 1.3rem;
     line-height: 1.8rem;
     width: 100%;
@@ -277,12 +231,12 @@
     gap: 1.6rem;
   }
 }
-.gallery__heading {
+.gallery__heading, .comment__header {
   width: 87%;
   display: flex;
 }
 @media screen and (max-width: 1279px) {
-  .gallery__heading {
+  .gallery__heading, .comment__header {
     width: 100%;
   }
 }
@@ -325,4 +279,146 @@
   .gallery__img {
     width: 100%;
   }
+}
+
+.comment {
+  gap: 0;
+}
+.form {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  flex-direction: column;
+  align-content: stretch;
+  gap: 0.2rem;
+  width: 40%;
+  margin: 4rem 0;
+}
+@media screen and (max-width: 1279px) {
+  .form {
+    min-width: 73%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .form {
+    align-self: flex-end;
+  }
+}
+.form__label {
+  margin: 0.4rem;
+}
+.form__img, .user-comment__img {
+  margin: 0rem 0rem -7.3rem -6rem;
+  height: 4.8rem;
+  width: 4.8rem;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media screen and (max-width: 767px) {
+  .form__img, .user-comment__img {
+    width: 3.6rem;
+    height: 3.6rem;
+  }
+}
+.form__input, .form__input-comment {
+  padding: 1.6rem;
+  min-width: 4.8rem;
+  border-radius: 0.4rem;
+  border: 1px solid #e1e1e1;
+  background-color: #fafafa;
+}
+@media screen and (max-width: 767px) {
+  .form__input, .form__input-comment {
+    min-width: 3.6rem;
+    padding: 1.2rem;
+  }
+}
+.form__input:focus, .form__input-comment:focus {
+  outline: 1px solid #000000;
+}
+.form__input::-moz-placeholder, .form__input-comment::-moz-placeholder {
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  font-family: "avenir";
+  font-weight: 400;
+  color: #323232;
+}
+.form__input:-ms-input-placeholder, .form__input-comment:-ms-input-placeholder {
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  font-family: "avenir";
+  font-weight: 400;
+  color: #323232;
+}
+.form__input::placeholder, .form__input-comment::placeholder {
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  font-family: "avenir";
+  font-weight: 400;
+  color: #323232;
+}
+.form__input-comment {
+  min-height: 13rem;
+  min-width: 13rem;
+}
+@media screen and (max-width: 767px) {
+  .form__input-comment {
+    min-height: 10rem;
+  }
+}
+
+.user-comment {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  align-content: stretch;
+  border-bottom: 1px solid #e1e1e1;
+  max-width: 50%;
+}
+@media screen and (max-width: 1279px) {
+  .user-comment {
+    max-width: 85.5%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .user-comment {
+    max-width: 100%;
+  }
+}
+.user-comment__wrapper, .user-comment__box, .user-comment__text {
+  width: 100%;
+}
+.user-comment__box {
+  display: flex;
+  gap: 1.6rem;
+  border-top: 1px solid #e1e1e1;
+  padding: 2rem 0 2rem 0;
+}
+.user-comment__text-box {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-direction: row;
+  align-content: stretch;
+}
+.user-comment__img {
+  margin: 0;
+  align-self: baseline;
+  background-color: #e1e1e1;
+}
+.user-comment__name, .user-comment__date, .user-comment__text {
+  margin: 0;
+  padding: 0;
+  width: auto;
+}
+.user-comment__name {
+  font-weight: 600;
+}
+.user-comment__date {
+  color: #afafaf;
+}
+.user-comment__text {
+  align-self: flex-start;
 }

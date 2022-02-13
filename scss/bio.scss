@@ -1,41 +1,6 @@
 @use "./partials/variables" as *;
 @use "./partials/mixins" as *;
 
-.herobox {
-  background-image: linear-gradient(
-      to top,
-      rgb(50, 50, 50, 0.5),
-      rgb(50, 50, 50, 0.5)
-    ),
-    url("../assets/Images/hero-bio.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  height: 60vw;
-  max-width: 100%;
-  @include flex;
-  @include fix(tablet) {
-    max-height: 60vw;
-  }
-  @include fix(phone) {
-    max-height: 60vw;
-  }
-
-  &__text {
-    @include text-style(700, white);
-    @include text-size(6.8rem, 6rem);
-    width: 86%;
-    @include fix(tablet) {
-      width: 100%;
-      padding: 0rem 3.6rem;
-    }
-    @include fix(phone) {
-      max-height: 60vw;
-      padding: 0 1.6rem 0 1.6rem;
-      @include text-size(3.2rem, 2.4rem);
-    }
-  }
-}
 .article {
   background-color: white;
   @include flex($direction: column);
@@ -190,5 +155,120 @@
     @include fix(phone) {
       width: 100%;
     }
+  }
+}
+.comment {
+  @extend .article;
+  gap: 0;
+  &__header {
+    @extend .gallery__heading;
+  }
+}
+.form {
+  @include flex($direction: column, $items: stretch);
+  gap: 0.2rem;
+  width: 40%;
+  margin: 4rem 0;
+  @include fix(tablet) {
+    min-width: 73%;
+  }
+  @include fix(phone) {
+    align-self: flex-end;
+  }
+
+  &__label {
+    margin: 0.4rem;
+  }
+  &__img {
+    margin: 0rem 0rem -7.3rem -6rem;
+    height: 4.8rem;
+    width: 4.8rem;
+    border-radius: 50%;
+    object-fit: cover;
+    @include fix(phone) {
+      width: 3.6rem;
+      height: 3.6rem;
+    }
+  }
+  &__input {
+    padding: 1.6rem;
+    min-width: 4.8rem;
+    border-radius: 0.4rem;
+    border: 1px solid $mercury;
+    background-color: $alabaster;
+    @include fix(phone) {
+      min-width: 3.6rem;
+      padding: 1.2rem;
+    }
+    &:focus {
+      outline: 1px solid $bandsite-black;
+    }
+    &::placeholder {
+      @include text-size(2.2rem, 1.4rem);
+      @include text-style(400);
+    }
+  }
+  &__input-comment {
+    min-height: 13rem;
+    min-width: 13rem;
+    @extend .form__input;
+    @include fix(phone) {
+      min-height: 10rem;
+    }
+  }
+}
+
+.user-comment {
+  @include flex($direction: column);
+  border-bottom: 1px solid $mercury;
+  max-width: 50%;
+
+  @include fix(tablet) {
+    max-width: 85.5%;
+  }
+  @include fix(phone) {
+    max-width: 100%;
+  }
+
+  &__wrapper,
+  &__box,
+  &__text {
+    width: 100%;
+  }
+  &__box {
+    display: flex;
+    gap: 1.6rem;
+    border-top: 1px solid $mercury;
+    padding: 2rem 0 2rem 0;
+    @include fix(tablet) {
+    }
+  }
+  &__text-box {
+    @include flex($content: space-between, $items: stretch);
+  }
+
+  &__img {
+    @extend .form__img;
+    margin: 0;
+    align-self: baseline;
+    background-color: $mercury;
+  }
+  &__name,
+  &__date,
+  &__text {
+    @extend .article__text;
+    margin: 0;
+    padding: 0;
+    width: auto;
+  }
+  &__name {
+    font-weight: 600;
+  }
+  &__date {
+    color: $silver;
+  }
+  &__text {
+    align-self: flex-start;
+    @extend .article__text;
   }
 }

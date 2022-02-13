@@ -22,12 +22,12 @@
           <a href="./index.html" class="nav__link nav__link--active"
             >Biography</a
           >
-          <a href="" class="nav__link">Shows</a>
+          <a href="./pages/shows.html" class="nav__link">Shows</a>
         </nav>
       </div>
     </header>
     <main class="herobox">
-      <h2 class="herobox__text">The Bees Knees</h2>
+      <h1 class="herobox__text">The Bees Knees</h1>
     </main>
     <article class="article">
       <h2 class="article__heading">About the Musicians</h2>
@@ -73,6 +73,7 @@
         </div>
       </section>
     </article>
+
     <article class="gallery">
       <h2 class="gallery__heading">Photo Gallery</h2>
       <section class="gallery__box">
@@ -123,34 +124,69 @@
         />
       </section>
     </article>
+    <aside class="comment">
+      <h2 class="comment__header">Join the Conversation</h2>
+      <form class="form">
+        <img class="form__img" src="../assets/Images/Mohan-muruge.jpg" />
+        <label for="name" class="form__label label">Name</label>
+        <input
+          type="text"
+          class="form__input"
+          name="username"
+          placeholder="Enter your name"
+          autocomple="off"
+        />
+        <label for="comment" class="form__label label">Comment</label>
+        <textarea
+          type="text"
+          class="form__input-comment"
+          name="usercomment"
+          autocomple="off"
+          placeholder="Add a comment"
+          spellcheck="true"
+        ></textarea>
+        <input type="submit" class="btn btn--bio" value="Comment" />
+      </form>
+      <section class="user-comment">
+        <!-- comments are dynamically generated -->
+      </section>
+    </aside>
     <footer class="footer">
       <div class="footer__container">
         <section class="footer__logo-box">
           <div class="footer__wrapper">
             <h2 class="footer__heading">Get in Touch</h2>
             <div class="footer__logo-wrapper">
-              <img
-                class="footer__logo footer__logo-ig"
-                src="./assets/Icons/SVG/Icon-instagram.svg"
-                alt="instagram logo"
-              />
-              <img
-                class="footer__logo footer__logo-fb"
-                src="./assets/Icons/SVG/Icon-facebook.svg"
-                alt="facebook logo"
-              />
-              <img
-                class="footer__logo footer__logo-tw"
-                src="./assets/Icons/SVG/Icon-twitter.svg"
-                alt="twitter logo"
-              />
+              <a href="https://instagram.com">
+                <img
+                  class="footer__logo footer__logo-ig"
+                  src="./assets/Icons/SVG/Icon-instagram.svg"
+                  alt="instagram logo"
+                />
+              </a>
+              <a href="https://facebook.com">
+                <img
+                  class="footer__logo footer__logo-fb"
+                  src="./assets/Icons/SVG/Icon-facebook.svg"
+                  alt="facebook logo"
+                />
+              </a>
+              <a href="https://twitter.com">
+                <img
+                  class="footer__logo footer__logo-tw"
+                  src="./assets/Icons/SVG/Icon-twitter.svg"
+                  alt="twitter logo"
+                />
+              </a>
             </div>
           </div>
-          <img
-            class="footer__logo-top"
-            alt="Bandsite logo"
-            src="./assets/Logo/Logo-bandsite.svg"
-          />
+          <a href="./index.html">
+            <img
+              class="footer__logo-top"
+              alt="Bandsite logo"
+              src="./assets/Logo/Logo-bandsite.svg"
+            />
+          </a>
         </section>
         <section class="footer__text-box">
           <div class="footer__box">
@@ -194,16 +230,19 @@
           </div>
         </section>
         <section class="footer__copy-box">
-          <img
-            class="footer__logo-bottom"
-            alt="Bandsite Logo"
-            src="./assets/Logo/Logo-bandsite.svg"
-          />
+          <a href="./index.html">
+            <img
+              class="footer__logo-bottom"
+              alt="Bandsite Logo"
+              src="./assets/Logo/Logo-bandsite.svg"
+            />
+          </a>
           <h3 class="footer__copy footer__txt--light">
             Copyright The Bees Knees © 2021 All Rights Reserved
           </h3>
         </section>
       </div>
     </footer>
+    <script src="./js/index.js"></script>
   </body>
 </html>
