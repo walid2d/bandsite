@@ -1,4 +1,6 @@
 "use strict";
+const apiKey = {"api_key":"cf9fa8e7-4ccd-4619-a7b6-ea78e4ddbc92"}; 
+
 const comments = [
   {
     name: "Connor Walton",
