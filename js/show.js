@@ -5,10 +5,9 @@ const dateConverter = function(tStamp){
   return dateNum;
   
 }
-
 const tableTicketWrapper = document.querySelector(".table__ticket-wrapper");
 const createTickets = function (arr) {
-  arr.forEach((k,i)=> {
+  arr.forEach((k)=> {
     // ticket container
     const ticket = document.createElement("div");
     ticket.classList.add("ticket");
@@ -18,7 +17,7 @@ const createTickets = function (arr) {
     dateLabel.textContent = 'Date';
     // ticket date
     const ticketDate = document.createElement("h3");
-    ticketDate.textContent = dateConverter(arr[i].date);
+    ticketDate.textContent = dateConverter(k.date);
     ticketDate.classList.add("ticket__date");
     //label
     const venueLabel = document.createElement("p");
@@ -26,7 +25,7 @@ const createTickets = function (arr) {
     venueLabel.textContent = "Venue";
     // ticket__name
     const ticketName = document.createElement("h3");
-    ticketName.textContent = arr[i].place;
+    ticketName.textContent = k.place;
     ticketName.classList.add("ticket__name");
     //label
     const locationLabel = document.createElement("p");
@@ -34,7 +33,7 @@ const createTickets = function (arr) {
     locationLabel.textContent = 'Location';
     //ticket place
     const ticketPlace = document.createElement("h3");
-    ticketPlace.textContent = arr[i].location;
+    ticketPlace.textContent = k.location;
     ticketPlace.classList.add("ticket__place");
     // ticket button
     const ticketBtn = document.createElement("a");
