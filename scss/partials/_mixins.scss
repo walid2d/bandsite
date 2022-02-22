@@ -1,6 +1,5 @@
 @use "./variables" as *;
 @use "./fonts" as *;
-// i talked with Jim about my deskstop first approach, He said he is okay with it.
 @mixin fix($breakpoint) {
   @if $breakpoint == tablet {
     @media screen and (max-width: $tablet) {
